@@ -95,6 +95,8 @@ function install_configs()
 	sudo cp -r --parents ./* /
 	sudo chown $USER:$USER -R /home/$USER
 	cd ..
+
+	echo "Installed configs"
 }
 
 # TODO
@@ -199,7 +201,11 @@ function install_gpg_configs()
 setup_aur
 install_driver_graphics
 install_i3
-install_configs
 pacman_install "fonts"
 pacman_install "utils"
 
+install_configs
+
+echo
+echo
+echo "Installation done."
