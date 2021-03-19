@@ -28,6 +28,41 @@ function pacman_install()
 	pacman -S --needed $(cat $1 | tr '\n' ' ')
 }
 
+# Creates a group, a user, adds the user to the sudoers file and sets up the AUR
+function setup_system()
+{
+	# 0. Install possible updates
+	
+	pacman -Syu
+	
+	# 1. Add group and user
+	
+	groupadd hauke
+	useradd -m -G hauke -s /bin/bash hauke
+	
+	# 2. Add to sudoers file
+	
+	chmod -c 0660 /etc/sudoers
+	
+	echo "Add 'hauke' to sudoers"
+	read -p "OK?"
+	vim /etc/sudoers
+	
+	chmod -c 0440 /etc/sudoers
+	
+	# 3. Set up AUR
+	
+	su hauke
+	setup_aur
+	#sudo pacman -S git
+	#git clone https://aur.archlinux.org/yay.git
+	#cd yay
+	#makepkg -si
+	#cd ..
+	#rm -rf yay
+	logout
+}
+
 # Setup pacman
 function setup_pacman()
 {
