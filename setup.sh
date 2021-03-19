@@ -43,24 +43,13 @@ function aur_install()
 function setup_system()
 {
 	# 0. Install possible updates
-	
 	pacman -Syu
 	
 	# 1. Add user and add to sudoers
-
 	create_user
 
-	# 3. Set up AUR
-	
-	su hauke
-	setup_aur
-	#sudo pacman -S git
-	#git clone https://aur.archlinux.org/yay.git
-	#cd yay
-	#makepkg -si
-	#cd ..
-	#rm -rf yay
-	logout
+	# 2. Set up AUR
+	su hauke -c "setup_aur"
 }
 
 # Setup pacman
