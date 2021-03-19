@@ -18,8 +18,9 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #0000
-background-alt = #222
+transparent = #0000
+background = #a6000000
+background-alt = #0000
 ;foreground = ${xrdb:color7:#222}
 foreground = #ddd
 foreground-alt = #777
@@ -29,13 +30,13 @@ alert = #bf1414
 
 [bar/bar]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 100%
-height = 20
-;offset-x = 1%
-offset-y = 10
-padding = 10
-radius = 0
-fixed-center = false
+width = 800px
+height = 35
+offset-x = 50%:-400px
+;offset-y = 10
+padding = 2
+radius = 5
+;fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -43,11 +44,12 @@ foreground = ${colors.foreground}
 line-size = 1
 ;line-color = #000
 
+border-size = 10
 border-bottom-size = 0
-border-color = ${colors.primary}
+border-color = ${colors.transparent}
 
-padding-left = 0
-padding-right = 0
+;padding-left = 10
+;padding-right = 10
 
 module-margin-left = 0
 module-margin-right = 2
@@ -67,9 +69,9 @@ tray-padding = 2
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
-;wm-restack = i3
+wm-restack = i3
 
-;override-redirect = true
+override-redirect = true
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -407,7 +409,7 @@ screenchange-reload = true
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
-;pseudo-transparency = false
+pseudo-transparency = true
 
 [global/wm]
 margin-top = 5

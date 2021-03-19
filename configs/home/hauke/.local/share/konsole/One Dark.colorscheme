@@ -1,17 +1,17 @@
 [Background]
-Color=41,45,50
+Color=0,0,0
 
 [BackgroundFaint]
-Color=41,45,50
+Color=0,0,0
 
 [BackgroundIntense]
-Color=41,45,50
+Color=0,0,0
 
 [Color0]
-Color=41,45,50
+Color=0,0,0
 
 [Color0Faint]
-Color=41,45,50
+Color=0,0,0
 
 [Color0Intense]
 Color=168,197,225
@@ -92,5 +92,5 @@ Color=147,155,170
 Blur=true
 ColorRandomization=false
 Description=One Dark
-Opacity=0.8
+Opacity=0.65
 Wallpaper=

@@ -9,10 +9,21 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $mod Mod1
+
+# Gaps
+gaps inner 10
+gaps outer 0
+gaps top 45
+
+# Rounded corners
+border_radius 20
 
 # Colors
-client.focused	#6f800d #434d08 #ffffff #a7bf14 #434d08
+# client.focused	#6f800d #434d08 #ffffff #a7bf14 #434d08
+
+# No borders
+client.focused #00000000 #434d08 #ffffff #00000000 #00000000
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -40,7 +51,7 @@ bindsym $mod+l exec i3lock \
 
 #exec --no-startup-id nm-applet
 exec --no-startup-id polybar -r -c ~/.config/polybar/config bar
-exec --no-startup-id picom --experimental-backends
+exec --no-startup-id picom
 exec --no-startup-id nitrogen --restore
 
 # Use pactl to adjust volume in PulseAudio.
@@ -127,16 +138,16 @@ bindsym $mod+Control+Left workspace prev
 bindsym $mod+Control+Right workspace next
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Ctrl+1 move container to workspace 1
+bindsym $mod+Ctrl+2 move container to workspace 2
+bindsym $mod+Ctrl+3 move container to workspace 3
+bindsym $mod+Ctrl+4 move container to workspace 4
+bindsym $mod+Ctrl+5 move container to workspace 5
+bindsym $mod+Ctrl+6 move container to workspace 6
+bindsym $mod+Ctrl+7 move container to workspace 7
+bindsym $mod+Ctrl+8 move container to workspace 8
+bindsym $mod+Ctrl+9 move container to workspace 9
+bindsym $mod+Ctrl+0 move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
