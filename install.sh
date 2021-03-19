@@ -24,7 +24,7 @@ function setup_aur()
 # Graphics driver
 function install_driver_graphics()
 {
-	pacman_install "driver-graphics.txt"
+	pacman_install "driver-graphics"
 }
 
 # Printer driver. Uses KDE's kcm_printer_manager.
@@ -66,7 +66,7 @@ function install_driver_printer()
 function install_driver_misc()
 {
 	assert_root
-	pacman_install "driver-wacom.txt"
+	pacman_install "driver-wacom"
 }
 
 # Driver
@@ -82,7 +82,7 @@ function install_all_drivers()
 # Xorg
 function install_xorg()
 {
-	pacman_install "x.txt"
+	pacman_install "x"
 }
 
 # i3 and required packages to make everything fancy *.*
