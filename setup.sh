@@ -39,17 +39,14 @@ function aur_install()
 	yay -S --needed $(cat ./packages/aur/$1 | tr '\n' ' ')
 }
 
-# Creates a group, a user, adds the user to the sudoers file and sets up the AUR
-function setup_system()
+# Setup Users
+function create_user()
 {
-	# 0. Install possible updates
-	pacman -Syu
-	
-	# 1. Add user and add to sudoers
-	create_user
+	assert_root
 
-	# 2. Set up AUR
-	su hauke -c "setup_aur"
+	useradd -m hauke
+	passwd hauke
+	echo "hauke ALL=(ALL) ALL" >> /etc/sudoers
 }
 
 # Setup pacman
@@ -65,16 +62,6 @@ function setup_pacman()
 	fi
 
 	pacman -Syu	
-}
-
-# Setup Users
-function create_user()
-{
-	assert_root
-
-	useradd -m hauke
-	passwd hauke
-	echo "hauke ALL=(ALL) ALL" >> /etc/sudoers
 }
 
 # Setup AUR
@@ -95,6 +82,19 @@ function setup_aur()
 	
 	cd ..
 	rm -rf yay
+}
+
+# Creates a group, a user, adds the user to the sudoers file and sets up the AUR
+function setup_system()
+{
+	# 1. Add user and add to sudoers
+	create_user
+
+	# 2. Init pacman
+	setup_pacman
+
+	# 3. Init AUR
+	su hauke -c "setup_aur"
 }
 
 # Graphics driver
