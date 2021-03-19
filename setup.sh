@@ -7,13 +7,13 @@ function create_user()
 {
 	assert_root
 
-	useradd -m hauke
-	echo "Added user hauke"
+	useradd -m $USER
+	echo "Added user $USER"
 
-	passwd hauke
+	passwd $USER
 
-	echo "hauke ALL=(ALL) ALL" >> /etc/sudoers
-	echo "Added hauke to sudoers"
+	echo "$USER ALL=(ALL) ALL" >> /etc/sudoers
+	echo "Added $USER to sudoers"
 }
 
 # Setup pacman
@@ -50,9 +50,9 @@ function setup_system()
 	setup_pacman
 
 	# 4. Copy stuff to new users home
-	mkdir /home/hauke/setup
-	cp -r ./* /home/hauke/setup/
-	chown hauke:hauke -R /home/hauke/setup
+	mkdir /home/$USER/setup
+	cp -r ./* /home/$USER/setup/
+	chown $USER:$USER -R /home/$USER/setup
 }
 
 # ############################################################################
@@ -66,6 +66,6 @@ setup_system
 echo
 echo
 echo "Next steps:"
-echo " 1. Login as 'hauke'"
+echo " 1. Login as '$USER'"
 echo " 2. Go into the 'setup' folder"
 echo " 3. Execute the 'install.sh' script"

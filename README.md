@@ -10,7 +10,8 @@ This step just makes sure the overall system is prepared.
 2. Install `git`
 3. `git clone https://hauke96/arch-i3-setup.git`
 4. `cd arch-i3-setup`
-5. `./setup.sh`
+5. Replace "hauke" in the `base.sh` by the user name of your choice
+6. `./setup.sh`
 
 # 3. Desktop setup
 

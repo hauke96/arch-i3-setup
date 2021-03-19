@@ -3,6 +3,8 @@
 set -e
 #set -o xtrace
 
+USER="hauke"
+
 # Assert that user is root
 function assert_root()
 {
