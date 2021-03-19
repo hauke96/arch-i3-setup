@@ -1,19 +1,21 @@
 # 1. Install Arch
 
+Well ... simply install Arch duh.
+
 # 2. System setup
 
 This step just makes sure the overall system is prepared.
 
-0. Login as `root`
-1. Install `git`
-2. `git clone https://hauke96/arch-i3-setup.git`
-3. `cd arch-i3-setup`
-4. `./setup.sh`
+1. Login as `root`
+2. Install `git`
+3. `git clone https://hauke96/arch-i3-setup.git`
+4. `cd arch-i3-setup`
+5. `./setup.sh`
 
 # 3. Desktop setup
 
-0. Login as your user
-1. `cd setup`
-2. `./install.sh`
-3. You probably want to reboot
+1. Login as your user
+2. `cd setup`
+3. `./install.sh`
+4. You probably want to reboot
 
