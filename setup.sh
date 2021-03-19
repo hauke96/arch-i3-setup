@@ -33,10 +33,18 @@ function setup_system()
 	# 1. Add user and add to sudoers
 	create_user
 
-	# 2. Init pacman
+	# 2. Adjust locale
+	locale-gen
+	echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen
+	
+	echo 'LANG="de_DE.UTF-8"' > /etc/locale.conf
+	echo 'LC_DATE="de_DE.UTF-8"' >> /etc/locale.conf
+	echo 'LC_NUMERIC="de_DE.UTF-8"' >> /etc/locale.conf
+
+	# 3. Init pacman
 	setup_pacman
 
-	# 3. Copy stuff to new users home
+	# 4. Copy stuff to new users home
 	mkdir /home/hauke/setup
 	cp -r ./* /home/hauke/setup/
 	chown hauke:hauke -R /home/hauke/setup

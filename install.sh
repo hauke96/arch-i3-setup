@@ -90,18 +90,6 @@ function install_i3()
 {
 	install_xorg
 	aur_install "i3"
-	
-	#systemctl enable sddm
-	
-	# Set locales correctly, because that doesn't work always correctly
-	#echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen
-	#locale-gen
-	
-	sudo tee -a /etc/locale.conf <<EOF
-LC_DATE="de_DE.UTF-8
-LC_NUMERIC="de_DE.UTF-8
-LC_COLLATE="de_DE.UTF-8
-EOF
 }
 
 # TODO
