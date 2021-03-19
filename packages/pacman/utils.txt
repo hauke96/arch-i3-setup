@@ -3,3 +3,5 @@ bash-completion
 man-db
 unzip
 konsole
+pulseaudio
+

@@ -51,17 +51,17 @@ font-5=IPAGothic:size=11;2
 modules-right = playerctl pulseaudio time powermenu
 
 ; i3
-; modules-left = launcher i3 xwindow
-; scroll-up = i3wm-wsnext
-; scroll-down = i3wm-wsprev
-; wm-restack = i3
+modules-left = launcher i3 xwindow
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+wm-restack = i3
 
 ; bspwm
-modules-left = launcher bspwm xwindow
-scroll-up = bspwm-wsnext
-scroll-down = bspwm-wsprev
-wm-restack = bspwm
-override-redirect = false
+; modules-left = launcher bspwm xwindow
+; scroll-up = bspwm-wsnext
+; scroll-down = bspwm-wsprev
+; wm-restack = bspwm
+; override-redirect = false
 
 
 
