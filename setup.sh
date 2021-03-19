@@ -54,7 +54,7 @@ function setup_pacman()
 {
 	assert_root
 	
-	if ! grep -q "\[multilib\]" /etc/pacman.conf
+	if ! grep -q "^\[multilib\]" /etc/pacman.conf
 	then
 		echo "Add multilib repo"
 		echo "[multilib]" >> /etc/pacman.conf
