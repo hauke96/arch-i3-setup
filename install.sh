@@ -93,6 +93,7 @@ function install_configs()
 {
 	cd configs
 	sudo cp -r --parents ./* /
+	chowm $USER:$USER -R /home/$USER
 	cd ..
 }
 
