@@ -91,6 +91,7 @@ function install_configs()
 {
 	cd configs
 	sudo cp -r --parents ./* /
+	cd ..
 }
 
 # TODO
