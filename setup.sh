@@ -85,7 +85,7 @@ function create_user()
 
 	useradd -m hauke
 	passwd hauke
-	echo "hauke ALL=(ALL) ALL" >> /etc/sudoers/
+	echo "hauke ALL=(ALL) ALL" >> /etc/sudoers
 }
 
 # Setup AUR
