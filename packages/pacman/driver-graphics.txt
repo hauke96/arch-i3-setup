@@ -1,4 +1,3 @@
-xf86-video
 xf86-video-amdgpu
 mesa
 mesa-vdpau
