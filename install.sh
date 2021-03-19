@@ -80,7 +80,7 @@ function install_all_drivers()
 }
 
 # Xorg
-function install_i3_xorg()
+function install_xorg()
 {
 	pacman_install "x.txt"
 }
@@ -88,7 +88,7 @@ function install_i3_xorg()
 # i3 and required packages to make everything fancy *.*
 function install_i3()
 {
-	install_i3_xorg
+	install_xorg
 	aur_install "i3"
 	
 	#systemctl enable sddm
