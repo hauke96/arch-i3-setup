@@ -168,7 +168,7 @@ function install_all_drivers()
 }
 
 # Xorg
-function install_xorg()
+function install_i3_xorg()
 {
 	assert_root
 	pacman_install "x.txt"
@@ -178,6 +178,7 @@ function install_xorg()
 function install_i3()
 {
 	assert_root
+	install_i3_xorg
 	yay_install "i3"
 	
 	#systemctl enable sddm
@@ -298,88 +299,12 @@ function install_configs()
 	cp ./gpg-agent.conf ~/.gnupg/
 }
 
-# TODO
-function usage()
-{
-	cat<<END
-Sets up my system base configuration.
+# ############################################################################
+# 
+#  START SETUP AND INSTALLATION
+# 
+# ############################################################################
 
-Usage: setup.sh [--all][-upadxkAh]
-
-Options:
- --all  $(echo -n "Installs everything. This has to be the first option and all following options will be ignored" | fold -s -w $(echo "$(tput cols) - 8" | bc -l) | sed -z -e "s|\n|\n        |g")
-  -u    Creates the user
-  -p    Configures pacman
-  -a    Configures the aur with yay
-  -d    Installs all drivers
-  -x    Installs X
-  -k    Installs KDE
-  -A    Installs the basic applications
-  -t    Configured the "Breeze Dark Green" theme
-  -c    Installs all configs and dot-files
-  -h    Shows this message
-
-All feedback to: 
-END
-}
-
-# TODO
-# getopts for bash cannot handle long arguments:
-if [ $1 == "--all" ]
-then
-	assert_root
-
-	create_user
-	setup_pacman
-	su hauke -c "setup_aur"
-	install_all_drivers
-	install_xorg
-	install_i3
-	install_apps
-	install_theme
-	install_configs
-	su hauke -c "install_theme"
-
-	exit
-fi
-
-# TODO
-while getopts "upadxkAth" opt; do
-	case $opt in
-	u)
-		create_user
-		;;
-	p)
-		setup_pacman
-		;;
-	a)
-		setup_aur
-		;;
-	d)
-		install_all_drivers
-		;;
-	x)
-		install_xorg
-		;;
-	k)
-		install_i3
-		;;
-	A)
-		install_apps
-		;;
-	t)
-		install_theme
-		;;
-	c)
-		install_configs
-		;;
-	h)
-		usage
-		;;
-	\?)
-		echo "Invalid option: -$OPTARG" >&2
-		;;
-	esac
-done
-
-# TODO: copy dot files
+setup_system
+install_all_drivers
+install_i3
