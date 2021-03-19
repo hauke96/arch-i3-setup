@@ -314,5 +314,6 @@ function install_configs()
 # ############################################################################
 
 setup_system
-install_all_drivers
+# TODO install all
+install_driver_graphics
 install_i3
