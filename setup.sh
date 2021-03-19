@@ -83,6 +83,7 @@ function setup_aur()
 	cd ..
 	rm -rf yay
 }
+export -f setup_aur
 
 # Creates a group, a user, adds the user to the sudoers file and sets up the AUR
 function setup_system()
@@ -94,7 +95,7 @@ function setup_system()
 	setup_pacman
 
 	# 3. Init AUR
-	su hauke -c "setup_aur"
+	su hauke -c "bash -c setup_aur"
 }
 
 # Graphics driver
