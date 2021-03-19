@@ -1,5 +1,8 @@
 [Desktop Entry]
 DefaultProfile=Hauke.profile
 
+[KonsoleWindow]
+ShowMenuBarByDefault=false
+
 [MainWindow]
 MenuBar=Disabled
