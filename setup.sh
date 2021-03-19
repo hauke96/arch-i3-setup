@@ -25,7 +25,15 @@ function pacman_install()
 {
 	assert_root
 
-	pacman -S --needed $(cat $1 | tr '\n' ' ')
+	pacman -S --needed $(cat ./packages/pacman/$1 | tr '\n' ' ')
+}
+
+# Takes a file as parameter and installs all packages in that file
+function aur_install()
+{
+	assert_root
+
+	yay -S --needed $(cat ./packages/aur/$1 | tr '\n' ' ')
 }
 
 # Creates a group, a user, adds the user to the sudoers file and sets up the AUR
@@ -179,7 +187,7 @@ function install_i3()
 {
 	assert_root
 	install_i3_xorg
-	yay_install "i3"
+	aur_install "i3"
 	
 	#systemctl enable sddm
 	
