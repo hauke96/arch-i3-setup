@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -e
+set -o xtrace
+
 # Assert that user is root
 function assert_root()
 {
@@ -43,21 +46,10 @@ function setup_system()
 	
 	pacman -Syu
 	
-	# 1. Add group and user
-	
-	groupadd hauke
-	useradd -m -G hauke -s /bin/bash hauke
-	
-	# 2. Add to sudoers file
-	
-	chmod -c 0660 /etc/sudoers
-	
-	echo "Add 'hauke' to sudoers"
-	read -p "OK?"
-	vim /etc/sudoers
-	
-	chmod -c 0440 /etc/sudoers
-	
+	# 1. Add user and add to sudoers
+
+	create_user
+
 	# 3. Set up AUR
 	
 	su hauke
