@@ -79,16 +79,10 @@ function install_all_drivers()
 	install_driver_misc
 }
 
-# Xorg
-function install_xorg()
-{
-	pacman_install "x"
-}
-
 # i3 and required packages to make everything fancy *.*
 function install_i3()
 {
-	install_xorg
+	pacman_install "x"
 	aur_install "i3"
 }
 
@@ -186,7 +180,7 @@ function install_apps()
 }
 
 # TODO
-function install_configs()
+function install_gpg_configs()
 {
 	mkdir -p ~/.gnupg
 	cp ./gpg-agent.conf ~/.gnupg/
@@ -202,3 +196,6 @@ setup_aur
 install_driver_graphics
 install_i3
 install_configs
+pacman_install "fonts"
+pacman_install "util"
+
