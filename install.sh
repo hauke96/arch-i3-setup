@@ -179,19 +179,6 @@ function install_apps()
 }
 
 # TODO
-function install_theme()
-{
-	assert_not_root
-
-	mkdir -p ~/.local/share/color-schemes/
-	mkdir -p ~/.local/share/plasma/desktoptheme/
-
-	cp kde-breeze-dark-green/BreezeDarkGreen.colors ~/.local/share/color-schemes/BreezeDarkGreen.colors
-	cp -r kde-breeze-dark-green/breeze-dark-green ~/.local/share/plasma/desktoptheme/
-	cp kde-breeze-dark-green/plasmarc ~/.config/
-}
-
-# TODO
 function install_configs()
 {
 	mkdir -p ~/.gnupg
