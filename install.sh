@@ -97,10 +97,11 @@ function install_i3()
 	#echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen
 	#locale-gen
 	
-	sudo echo 'LANG="de_DE.UTF-8"' > /etc/locale.conf
-	sudo echo 'LC_DATE="de_DE.UTF-8"' >> /etc/locale.conf
-	sudo echo 'LC_NUMERIC="de_DE.UTF-8"' >> /etc/locale.conf
-	sudo echo 'LC_COLLATE="de_DE.UTF-8"' >> /etc/locale.conf
+	sudo tee -a /etc/locale.conf <<EOF
+LC_DATE="de_DE.UTF-8
+LC_NUMERIC="de_DE.UTF-8
+LC_COLLATE="de_DE.UTF-8
+EOF
 }
 
 # TODO
