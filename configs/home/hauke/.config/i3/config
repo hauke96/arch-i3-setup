@@ -39,9 +39,9 @@ bindsym $mod+l exec i3lock \
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 #exec --no-startup-id nm-applet
-exec --no-startup-id nitrogen --restore &
-exec --no-startup-id picom --experimental-backends &
-exec --no-startup-id polybar ~/.config/polybar/config bar
+exec --no-startup-id polybar -r -c ~/.config/polybar/config bar
+exec --no-startup-id picom --experimental-backends
+exec --no-startup-id nitrogen --restore
 
 # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status killall -SIGUSR1 i3status
