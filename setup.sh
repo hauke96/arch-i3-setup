@@ -39,6 +39,7 @@ function setup_system()
 	# 3. Copy stuff to new users home
 	mkdir /home/hauke/setup
 	cp -r ./* /home/hauke/setup/
+	chown hauke:hauke -R /home/hauke/setup
 }
 
 # ############################################################################

@@ -215,6 +215,6 @@ function install_configs()
 # 
 # ############################################################################
 
-setup_system
-sudo install_driver_graphics
+setup_aur
+install_driver_graphics
 install_i3

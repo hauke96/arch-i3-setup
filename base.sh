@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-set -o xtrace
+#set -o xtrace
 
 # Assert that user is root
 function assert_root()
