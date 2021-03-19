@@ -198,5 +198,5 @@ install_driver_graphics
 install_i3
 install_configs
 pacman_install "fonts"
-pacman_install "util"
+pacman_install "utils"
 
