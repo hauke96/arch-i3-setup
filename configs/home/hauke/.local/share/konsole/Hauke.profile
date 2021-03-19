@@ -10,8 +10,9 @@ Parent=FALLBACK/
 KeyBindings=default
 
 [Scrolling]
-HistoryMode=1
+HistoryMode=2
 HistorySize=100000
+ScrollBarPosition=2
 
 [Terminal Features]
 UrlHintsModifiers=0
