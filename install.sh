@@ -201,3 +201,4 @@ function install_configs()
 setup_aur
 install_driver_graphics
 install_i3
+install_configs

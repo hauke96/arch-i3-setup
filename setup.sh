@@ -40,6 +40,7 @@ function setup_system()
 	echo 'LANG="de_DE.UTF-8"' > /etc/locale.conf
 	echo 'LC_DATE="de_DE.UTF-8"' >> /etc/locale.conf
 	echo 'LC_NUMERIC="de_DE.UTF-8"' >> /etc/locale.conf
+	echo 'LC_COLLATE=C' >> /etc/locale.conf
 
 	# 3. Init pacman
 	setup_pacman
