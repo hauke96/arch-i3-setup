@@ -1,3 +1,4 @@
 i3-gaps
 polybar
 picom
+nitrogen
