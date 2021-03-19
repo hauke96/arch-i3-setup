@@ -8,8 +8,12 @@ function create_user()
 	assert_root
 
 	useradd -m hauke
+	echo "Added user hauke"
+
 	passwd hauke
+
 	echo "hauke ALL=(ALL) ALL" >> /etc/sudoers
+	echo "Added hauke to sudoers"
 }
 
 # Setup pacman
