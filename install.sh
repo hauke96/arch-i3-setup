@@ -83,6 +83,8 @@ function install_all_drivers()
 function install_i3()
 {
 	pacman_install "x"
+	localectl --no-convert set-x11-keymap de
+
 	aur_install "i3"
 }
 
