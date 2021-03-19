@@ -59,8 +59,8 @@ font-2 = siji:pixelsize=10;1
 modules-left = i3
 ;modules-center = mpd
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-right = filesystem memory cpu eth temperature date
-; Also available: xbacklight battery wlan
+modules-right = filesystem memory cpu eth date
+; Also available: xbacklight battery wlan temperature
 
 tray-position = right
 tray-padding = 2
@@ -230,7 +230,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp2s0
+interface = enp0s3
 interval = 3.0
 
 format-connected-underline = ${colors.primary}

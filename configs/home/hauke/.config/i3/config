@@ -38,9 +38,9 @@ bindsym $mod+l exec i3lock \
 	--ringvercolor=1464bf70
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-exec --no-startup-id nm-applet
-exec --no-startup-id picom
-exec --no-startup-id nitrogen --restore
+#exec --no-startup-id nm-applet
+exec --no-startup-id nitrogen --restore &
+exec --no-startup-id picom --experimental-backends &
 exec --no-startup-id polybar ~/.config/polybar/config bar
 
 # Use pactl to adjust volume in PulseAudio.
