@@ -92,6 +92,13 @@ function install_i3()
 	aur_install "i3"
 }
 
+# Copy all the config files
+function install_configs()
+{
+	cd configs
+	sudo cp -r --parents ./* /
+}
+
 # TODO
 function install_apps()
 {
