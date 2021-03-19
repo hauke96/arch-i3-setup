@@ -1,0 +1,3 @@
+xorg-server
+xorg
+xorg-apps 
