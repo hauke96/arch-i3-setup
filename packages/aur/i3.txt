@@ -1,5 +1,6 @@
 i3-gaps
 polybar
+rofi
 
 # Composer: Fork with rounded edges and better blur
 picom-ibhagwan-git

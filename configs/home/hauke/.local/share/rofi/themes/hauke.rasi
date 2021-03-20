@@ -1,0 +1,165 @@
+/* ==========================================================================
+   Rofi color theme
+
+   Based on the Gruvbox color scheme for Vim by morhetz
+   https://github.com/morhetz/gruvbox
+
+   File: gruvbox-dark.rasi
+   Desc: Gruvbox dark color theme for Rofi
+   Author: bardisty <b@bah.im>
+   Source: https://github.com/bardisty/gruvbox-rofi
+   Modified: Mon Feb 12 2018 04:08:43 PST -0800
+   ========================================================================== */
+
+* {
+    /* Theme settings */
+    highlight: bold italic;
+    scrollbar: true;
+
+    background:                      #000000a6;
+    background-color:                transparent;
+    foreground:                      #dddddd;
+
+    bordercolor:                     #aa9616;
+    separatorcolor:                  #aa9616;
+    scrollbar-color:                 #aa961656;
+
+    normal-background:               transparent; //#000000;
+    normal-foreground:               @foreground;
+    alternate-normal-background:     transparent; //#333333;
+    selected-normal-background:      #aa961656;
+    selected-normal-foreground:      #ffffff;
+
+    active-background:               #000000;
+    active-foreground:               #1678aa;
+    alternate-active-background:     #333333;
+    selected-active-background:      #1678aa56;
+    selected-active-foreground:      #ffffff;
+
+    urgent-background:               #000000;
+    urgent-foreground:               #e51d1d;
+    alternate-urgent-background:     #333333;
+    selected-urgent-background:      #aa161656;
+    selected-urgent-foreground:      #ffffff;
+
+    alternate-normal-foreground:     @normal-foreground;
+    alternate-urgent-foreground:     @urgent-foreground;
+    alternate-active-foreground:     @active-foreground;
+
+    font: "Hack 8";
+}
+
+window {
+    background-color: @background;
+    border:           0;
+    padding:          8;
+}
+
+mainbox {
+    border:  0;
+    padding: 0;
+}
+
+message {
+    border:       2px 0 0;
+    padding:      1px;
+}
+
+textbox {
+    highlight:  @highlight;
+    text-color: @foreground;
+}
+
+listview {
+    border:       1px solid 0 0;
+    padding:      8px 0 0;
+    border-color: @separatorcolor;
+}
+
+element {
+    border:  0;
+    padding: 2px;
+}
+
+element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+
+element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+
+element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+
+element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+
+element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+
+scrollbar {
+    width:            4px;
+    handle-color:     @scrollbar-color;
+    handle-width:     8px;
+    margin:           0 0 0 4px;
+}
+
+sidebar {
+    border:       2px 0 0;
+    border-color: @separatorcolor;
+}
+
+inputbar {
+    spacing:    0;
+    text-color: @normal-foreground;
+    padding:    0px 4px 4px 4px;
+    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
+}
+
+case-indicator,
+entry,
+prompt,
+button {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+textbox-prompt-sep {
+    expand:     false;
+    str:        " → ";
+    text-color: @normal-foreground;
+}
