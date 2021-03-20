@@ -16,14 +16,29 @@ gaps inner 10
 gaps outer 0
 gaps top 45
 
-# Rounded corners
-border_radius 20
+# Border
+
+# Only works with i3-gaps-rounded:
+#border_radius 10
+
+# Remove title bar
+for_window [class=".*"] border pixel 0
 
 # Colors
 # client.focused	#6f800d #434d08 #ffffff #a7bf14 #434d08
+# client.focused #434d08 #434d08 #dddddd #a7bf14 #434d08
 
 # No borders
-client.focused #00000000 #434d08 #ffffff #00000000 #00000000
+#set_from_resource $primaryDark primaryDark #f00
+#set_from_resource $primary primary #f00
+#set_from_resource $foreground foreground #f00
+#set_from_resource $background background #f00
+#set_from_resource $transparent transparent #f00
+#set_from_resource $color8 color8 #f00
+
+#client.focused $primary $primaryDark $foreground $primaryDark $primary
+#client.focused $transparent $transparent $transparent $transparent $transparent
+#client.unfocused $transparent $color8 $foreground $transparent $transparent
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.

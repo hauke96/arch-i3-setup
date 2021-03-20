@@ -17,16 +17,17 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
+background = ${xrdb:backgroundTransparent:#f00}
 transparent = #0000
-background = #a6000000
-background-alt = #0000
+;background = #a6000000
+background-alt = ${colors.background}
 ;foreground = ${xrdb:color7:#222}
-foreground = #ddd
-foreground-alt = #777
-primary = #a7bf14
-secondary = #a7bf14
-alert = #bf1414
+foreground = ${xrdb:foreground:#f00}
+foreground-alt = ${colors.foreground}
+primary = ${xrdb:primary:#f00}
+secondary = ${colors.primary}
+alert = ${xrdb:color1:#f00}
+;alert = #bf1414
 
 [bar/bar]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -35,7 +36,7 @@ height = 35
 offset-x = 50%:-400px
 ;offset-y = 10
 padding = 2
-radius = 5
+radius = 10
 ;fixed-center = true
 
 background = ${colors.background}
@@ -238,7 +239,7 @@ interval = 3.0
 format-connected-underline = ${colors.primary}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = Ethernet (%local_ip%)
+label-connected = %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
