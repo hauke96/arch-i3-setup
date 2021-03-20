@@ -4,3 +4,4 @@
 *.backgroundTransparent: #a6000000
 *.cursorColor:  #a7bf14
 *.primary:      #a7bf14
+*.primaryDark:  #434d08
