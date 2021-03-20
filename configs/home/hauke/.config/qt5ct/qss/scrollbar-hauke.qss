@@ -9,9 +9,15 @@ QScrollBar:vertical{
   width: 24px;
 }
 QScrollBar::handle{
-  background: palette(base);
+  background: palette(light);
   margin: 8px 8px 8px 8px;
   border-radius: 4px;
+}
+QScrollBar::handle:horizontal{
+  min-height: 24px;
+}
+QScrollBar::handle:vertical{
+  min-height: 24px;
 }
 QScrollBar::handle:hover, QScrollBar::add-line:hover, QScrollBar::sub-line:hover{
   background: palette(highlight);
