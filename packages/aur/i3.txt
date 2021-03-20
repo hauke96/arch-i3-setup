@@ -1,5 +1,5 @@
 i3-gaps-rounded
 polybar
-picom
+picom-ibhagwan-git
 nitrogen
-ttf-cheapskate
+siji-git
