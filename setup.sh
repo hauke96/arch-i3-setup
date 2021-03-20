@@ -12,8 +12,16 @@ function create_user()
 
 	passwd $USER
 
-	echo "$USER ALL=(ALL) ALL" >> /etc/sudoers
-	echo "Added $USER to sudoers"
+	if ! grep -q "^$USER" /etc/sudoers
+	then
+		chmod 0660 /etc/sudoers
+		echo "$USER ALL=(ALL) ALL" >> /etc/sudoers
+		chmod 04460 /etc/sudoers
+
+		echo "Added $USER to sudoers"
+	else
+		echo "User $USER already in sudoers file"
+	fi
 }
 
 # Setup pacman
