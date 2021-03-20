@@ -1,0 +1,14 @@
+[OSD]
+Enabled=true
+
+[PlasmaToolTips]
+Delay=0.7
+
+[Theme]
+name=breeze-dark-green
+
+[Theme-plasmathemeexplorer]
+name=breeze-dark-green
+
+[Wallpapers]
+usersWallpapers=/home/hauke/Bilder/desktop.JPG
