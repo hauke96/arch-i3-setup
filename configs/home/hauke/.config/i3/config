@@ -81,7 +81,7 @@ exec --no-startup-id nitrogen --restore
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
+bindsym Ctrl+$mod+T exec konsole
 
 # kill focused window
 bindsym $mod+Shift+q kill
