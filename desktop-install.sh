@@ -192,20 +192,19 @@ function install_gpg_configs()
 	cp ./gpg-agent.conf ~/.gnupg/
 }
 
-# ############################################################################
-# 
-#  START SETUP AND INSTALLATION
-# 
-# ############################################################################
-
+# 1. Setup AUR
 setup_aur
+
+# 2. Install important packages
 install_driver_graphics
+
+# 3. Install basic desktop packages and utilities
 install_i3
 pacman_install "fonts"
 pacman_install "utils"
 
-install_configs
+# 4. Install normal applications
+# TODO
 
-echo
-echo
-echo "Installation done."
+# 5. Copy all configs
+install_configs
