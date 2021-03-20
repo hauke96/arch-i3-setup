@@ -112,7 +112,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#a7bf14}%mountpoint%%{F-} : %percentage_used%% (%total%)
+label-mounted = %{F#aa9619}%mountpoint%%{F-} : %percentage_used%% (%total%)
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -181,7 +181,7 @@ bar-indicator-foreground = #fff
 bar-indicator-font = 2
 bar-fill = ─
 bar-fill-font = 2
-bar-fill-foreground = #a7bf14
+bar-fill-foreground = ${xrdb:primary:#f00}
 bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
