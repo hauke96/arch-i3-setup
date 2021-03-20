@@ -31,9 +31,9 @@ alert = ${xrdb:color1:#f00}
 
 [bar/bar]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 800px
+width = 100%
 height = 35
-offset-x = 50%:-400px
+#offset-x = 50%:-400px
 ;offset-y = 10
 padding = 2
 radius = 10
@@ -53,16 +53,16 @@ border-color = ${colors.transparent}
 ;padding-right = 10
 
 module-margin-left = 0
-module-margin-right = 2
+module-margin-right = 4
 
 font-0 = hack:fontformat=truetype:size=8:antialias=true;0
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-;modules-center = mpd
+modules-center = filesystem memory cpu eth
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-right = filesystem memory cpu eth date
+modules-right = date
 ; Also available: xbacklight battery wlan temperature
 
 tray-position = right
@@ -93,22 +93,22 @@ blacklist-0 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
+#format-prefix-underline = ${colors.secondary}
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+#label-layout-underline = ${colors.secondary}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
+#label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
 interval = 25
 
-label-mounted-underline = ${colors.primary}
-label-unmounted-underline = ${colors.primary}
+#label-mounted-underline = ${colors.primary}
+#label-unmounted-underline = ${colors.primary}
 
 mount-0 = /
 
@@ -142,7 +142,7 @@ label-unfocused-padding = 2
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+#label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
@@ -171,7 +171,7 @@ label-song-ellipsis = true
 type = internal/xbacklight
 
 format = <label> <bar>
-format-underline = ${colors.primary}
+#format-underline = ${colors.primary}
 
 label = Light
 
@@ -198,7 +198,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.primary}
+#format-underline = ${colors.primary}
 label = %percentage:2%%
 
 [module/memory]
@@ -206,7 +206,7 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.primary}
+#format-underline = ${colors.primary}
 label = %percentage_used%%
 
 [module/wlan]
@@ -215,7 +215,7 @@ interface = wlp3s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = ${colors.primary}
+#format-connected-underline = ${colors.primary}
 label-connected = %essid% (%local_ip%)
 
 format-disconnected =
@@ -236,7 +236,7 @@ type = internal/network
 interface = enp0s3
 interval = 3.0
 
-format-connected-underline = ${colors.primary}
+#format-connected-underline = ${colors.primary}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
@@ -259,7 +259,7 @@ time-alt = %H:%M:%S
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.primary}
+#format-underline = ${colors.primary}
 
 label = %date% %time%
 
