@@ -39,7 +39,10 @@ function setup_system()
 
 	# 2. Adjust locale
 	locale-gen
-	echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen
+	if ! grep -q "^de_DE.UTF-8 UTF-8" /etc/locale.gen
+	then
+		echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen
+	fi
 	
 	echo 'LANG="de_DE.UTF-8"' > /etc/locale.conf
 	echo 'LC_DATE="de_DE.UTF-8"' >> /etc/locale.conf
@@ -63,9 +66,18 @@ function setup_system()
 
 setup_system
 
-echo
-echo
-echo "Next steps:"
-echo " 1. Login as '$USER'"
-echo " 2. Go into the 'setup' folder"
-echo " 3. Execute the 'install.sh' script"
+#echo
+#echo
+#echo "Next steps:"
+#echo " 1. Login as '$USER'"
+#echo " 2. Go into the 'setup' folder"
+#echo " 3. Execute the 'install.sh' script"
+
+# ############################################################################
+# 
+#  START INSTALLATION
+# 
+# ############################################################################
+
+cd /home/hauke/setup
+sudo -u $USER ./install.sh
