@@ -2,6 +2,6 @@
 *.foreground:   #dddddd
 *.background:   #000000
 *.backgroundTransparent: #a6000000
-*.cursorColor:  #a7bf14
-*.primary:      #a7bf14
-*.primaryDark:  #434d08
+*.cursorColor:  #aa9619
+*.primary:      #aa9619
+*.primaryDark:  #5a4e0c

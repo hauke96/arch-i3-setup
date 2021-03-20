@@ -55,9 +55,9 @@ border-color = ${colors.transparent}
 module-margin-left = 0
 module-margin-right = 4
 
-font-0 = hack:fontformat=truetype:size=8:antialias=true;0
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-0 = hack:fontformat=truetype:size=8:antialias=true;2
+#font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-1 = siji:pixelsize=10;2
 
 modules-left = i3
 modules-center = filesystem memory cpu eth
@@ -112,7 +112,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#a7bf14}%mountpoint%%{F-} : %percentage_used%% (%total%)
+label-mounted = %{F#aa9619}%mountpoint%%{F-} : %percentage_used%% (%total%)
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -181,7 +181,7 @@ bar-indicator-foreground = #fff
 bar-indicator-font = 2
 bar-fill = ─
 bar-fill-font = 2
-bar-fill-foreground = #a7bf14
+bar-fill-foreground = ${xrdb:primary:#f00}
 bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}

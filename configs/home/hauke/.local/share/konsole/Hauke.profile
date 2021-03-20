@@ -12,7 +12,7 @@ KeyBindings=default
 [Scrolling]
 HistoryMode=2
 HistorySize=100000
-ScrollBarPosition=2
+ScrollBarPosition=1
 
 [Terminal Features]
 UrlHintsModifiers=0
