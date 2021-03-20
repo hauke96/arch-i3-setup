@@ -28,7 +28,7 @@ function assert_not_root()
 # Takes a file as parameter and installs all packages in that file
 function pacman_install()
 {
-	sudo pacman -S --needed $(cat ./packages/pacman/$1.txt | tr '\n' ' ')
+	sudo pacman -S --needed $(cat ./packages/pacman/$1.txt | grep -v "^#" | tr '\n' ' ')
 	echo "Installed $1"
 }
 
@@ -37,7 +37,7 @@ function aur_install()
 {
 	assert_not_root
 
-	yay -S --needed $(cat ./packages/aur/$1.txt | tr '\n' ' ')
+	yay -S --needed $(cat ./packages/aur/$1.txt | grep -v "^#" | tr '\n' ' ')
 	echo "Installed $1"
 }
 
