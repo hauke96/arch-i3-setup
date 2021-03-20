@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 source ./base.sh
 
 # ############################################################################
@@ -10,6 +8,7 @@ source ./base.sh
 # 
 # ############################################################################
 
+echo "Start system setup"
 ./system-setup.sh
 echo
 echo "System setup done. Continue with desktop installation."
@@ -22,7 +21,10 @@ echo
 # 
 # ############################################################################
 
+echo "Switch to $TARGET_USER home folder"
 cd /home/$TARGET_USER/setup
+
+echo "Start desktop installation script"
 sudo -u $TARGET_USER ./desktop-install.sh
 echo "Desktop installation done. Nothing left to do."
 

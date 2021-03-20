@@ -27,15 +27,18 @@ function create_user()
 # Generates and sets correct locales
 function setup_locale()
 {
-	locale-gen
-	if ! grep -q "^de_DE.UTF-8 UTF-8" /etc/locale.gen
+	if ! grep -q "^$LOC_GEN" /etc/locale.gen
 	then
-		echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen
+		echo "Activate locale '$LOC_GEN'"
+		echo "$LOC_GEN" >> /etc/locale.gen
+	else
+		echo "Locale already active"
 	fi
+	locale-gen
 
-	echo 'LANG="de_DE.UTF-8"' > /etc/locale.conf
-	echo 'LC_DATE="de_DE.UTF-8"' >> /etc/locale.conf
-	echo 'LC_NUMERIC="de_DE.UTF-8"' >> /etc/locale.conf
+	echo 'LANG="'"$LOC"'"' > /etc/locale.conf
+	echo 'LC_DATE="'"$LOC"'"' >> /etc/locale.conf
+	echo 'LC_NUMERIC="'"$LOC"'"' >> /etc/locale.conf
 	echo 'LC_COLLATE=C' >> /etc/locale.conf
 }
 
@@ -49,6 +52,8 @@ function setup_pacman()
 		echo "Add multilib repo"
 		echo "[multilib]" >> /etc/pacman.conf
 		echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
+	else
+		echo "Multilib already added"
 	fi
 
 	pacman -Syu	
@@ -57,16 +62,23 @@ function setup_pacman()
 
 
 # 1. Add user and add to sudoers
+echo "Create user"
 create_user
+echo "User creation done"
 
 # 2. Adjust locale
+echo "Set up locale"
 setup_locale
+echo "Locale setup done"
 
 # 3. Init pacman
+echo "Set up pacman"
 setup_pacman
+echo "Pacman setup done"
 
 # 4. Copy stuff to new users home
+echo "Copy configs into target users home folder"
 mkdir /home/$TARGET_USER/setup
 cp -r ./* /home/$TARGET_USER/setup/
 chown $TARGET_USER:$TARGET_USER -R /home/$TARGET_USER/setup
-
+echo "Copying configs into target users home folder done"
