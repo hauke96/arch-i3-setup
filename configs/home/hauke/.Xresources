@@ -1,0 +1,6 @@
+! special
+*.foreground:   #dddddd
+*.background:   #000000
+*.backgroundTransparent: #a6000000
+*.cursorColor:  #a7bf14
+*.primary:      #a7bf14

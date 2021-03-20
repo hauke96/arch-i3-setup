@@ -12,9 +12,9 @@
 set $mod Mod1
 
 # Gaps
-gaps inner 10
+gaps inner 8
 gaps outer 0
-gaps top 45
+gaps top 41
 
 # Border
 
