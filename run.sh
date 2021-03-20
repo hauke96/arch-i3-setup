@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -e
 
 # ############################################################################
 # 
@@ -7,7 +8,7 @@
 # 
 # ############################################################################
 
-setup_system
+./system-setup.sh
 echo
 echo "System setup done. Continue with desktop installation."
 echo
@@ -19,8 +20,8 @@ echo
 # 
 # ############################################################################
 
-cd /home/hauke/setup
-sudo -u $USER ./install.sh
+cd /home/$USER/setup
+sudo -u $USER ./desktop-install.sh
 echo "Desktop installation done. Nothing left to do."
 
 echo
