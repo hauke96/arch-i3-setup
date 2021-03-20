@@ -1,4 +1,4 @@
-i3-gaps-rounded
+i3-gaps
 polybar
 picom-ibhagwan-git
 nitrogen
