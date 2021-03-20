@@ -7,20 +7,20 @@ function create_user()
 {
 	assert_root
 
-	useradd -m $USER
-	echo "Added user $USER"
+	useradd -m $TARGET_USER
+	echo "Added user $TARGET_USER"
 
-	passwd $USER
+	passwd $TARGET_USER
 
-	if ! grep -q "^$USER" /etc/sudoers
+	if ! grep -q "^$TARGET_USER" /etc/sudoers
 	then
 		chmod 0660 /etc/sudoers
-		echo "$USER ALL=(ALL) ALL" >> /etc/sudoers
+		echo "$TARGET_USER ALL=(ALL) ALL" >> /etc/sudoers
 		chmod 04460 /etc/sudoers
 
-		echo "Added $USER to sudoers"
+		echo "Added $TARGET_USER to sudoers"
 	else
-		echo "User $USER already in sudoers file"
+		echo "User $TARGET_USER already in sudoers file"
 	fi
 }
 
@@ -66,7 +66,7 @@ setup_locale
 setup_pacman
 
 # 4. Copy stuff to new users home
-mkdir /home/$USER/setup
-cp -r ./* /home/$USER/setup/
-chown $USER:$USER -R /home/$USER/setup
+mkdir /home/$TARGET_USER/setup
+cp -r ./* /home/$TARGET_USER/setup/
+chown $TARGET_USER:$TARGET_USER -R /home/$TARGET_USER/setup
 

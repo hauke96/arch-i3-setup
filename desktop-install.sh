@@ -35,7 +35,7 @@ function install_driver_printer()
 	LOG=${0##*/}.log
 	PRINT_MANAGER="kcmshell5 kcm_printer_manager"
 	
-	su $USER -c "yay -S --needed brother-hl5450dn"
+	su $TARGET_USER -c "yay -S --needed brother-hl5450dn"
 	
 	systemctl enable cups-browsed.service
 	systemctl start cups-browsed.service
@@ -93,7 +93,7 @@ function install_configs()
 {
 	cd configs
 	sudo cp -r --parents ./* /
-	sudo chown $USER:$USER -R /home/$USER
+	sudo chown $TARGET_USER:$TARGET_USER -R /home/$TARGET_USER
 	cd ..
 
 	echo "Installed configs"
@@ -139,7 +139,7 @@ function install_apps()
 		texlive-science \
 		texstudio
 	yay -S --needed latex-pgfplots
-	su $USER -c "yay -S qemu-kvm"
+	su $TARGET_USER -c "yay -S qemu-kvm"
 
 	# Internet
 	pacman -S --needed \
@@ -156,7 +156,7 @@ function install_apps()
 		ktorrent \
 		kdeconnect \
 		sshfs
-	su $USER -c "yay -S --needed signal"
+	su $TARGET_USER -c "yay -S --needed signal"
 
 	# Gaming
 	pacman -S --needed \
@@ -182,7 +182,7 @@ function install_apps()
 		pavucontrol \
 		skanlite
 
-	su $USER -c "yay -S --needed spotify"
+	su $TARGET_USER -c "yay -S --needed spotify"
 }
 
 # TODO

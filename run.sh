@@ -2,6 +2,8 @@
 
 set -e
 
+source ./base.sh
+
 # ############################################################################
 # 
 #  START SETUP
@@ -20,8 +22,8 @@ echo
 # 
 # ############################################################################
 
-cd /home/$USER/setup
-sudo -u $USER ./desktop-install.sh
+cd /home/$TARGET_USER/setup
+sudo -u $TARGET_USER ./desktop-install.sh
 echo "Desktop installation done. Nothing left to do."
 
 echo
