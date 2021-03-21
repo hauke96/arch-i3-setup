@@ -3,4 +3,4 @@
 spotify
 
 # VirtualBox
-vortualbox-ext-oracle
+virtualbox-ext-oracle
