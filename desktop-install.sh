@@ -30,16 +30,16 @@ function install_driver_graphics()
 # Printer driver. Uses KDE's kcm_printer_manager.
 function setup_printer()
 {
-	assert_root
-
+#	assert_root
+#
 #	LOG=${0##*/}.log
 #	PRINT_MANAGER="kcmshell5 kcm_printer_manager"
 	
 	# Just to make sure driver package is installed which is usually installed via packages/aur/utils.txt
-	su $TARGET_USER -c "yay --noconfirm -S --needed brother-hl5450dn"
+	yay --noconfirm -S --needed brother-hl5450dn
 	
-	systemctl enable cups-browsed.service
-	systemctl start cups-browsed.service
+	sudo systemctl enable cups-browsed.service
+	sudo systemctl start cups-browsed.service
 	
 #	echo "Hinweis:"
 #	echo "Drucker muss noch eingerichtet werden! Wie folgt vorgehen:"
