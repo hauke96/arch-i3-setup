@@ -1,0 +1,15 @@
+[user]
+	name = Hauke Stieler
+	email = mail@hauke-stieler.de
+	signingkey = 4E2023AC217FC267BE92823E1C242A9080C2A8F0
+[push]
+	default = simple
+[commit]
+	gpgsign = true
+[credential]
+	helper = cache --timeout=2628000
+[core]
+	editor = vim
+	pager = less -F -X
+[pull]
+	rebase = false

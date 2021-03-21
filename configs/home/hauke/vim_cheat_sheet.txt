@@ -1,0 +1,64 @@
+* Own commands
+
+gf						  Open file (goto file)
+<c-w>gf					  Open file in new tab
+
+<c-@>					* Autocompletion
+<c-c>					* Bash
+<c-\>					* Jump to tag in new tab
+<c-}>					  Jump to tag in same tab
+f						* Show name of function I'm in
+<c-u>					* Show usages of word under cursor in new tab
+b						* Git blame current file
+
+yy						  Copy current line
+Xyy						  Copy X lines
+yXG						  Copy until including line X
+dd						  Cut current line
+Xdd						  Cut X lines
+dXG						  Cut until including line X
+p						  Paste after current line
+P						  Paste before current line
+gr						* Rename word under cursor (for whole file)
+
+/						  Search
+:s/foo/bar/g			  Replaces every foo in current line by bar
+:%s/foo/bar/g			  Replaces every foo in file by bar
+:%s/foo/bar/gc			  Like above, asks for every replacement
+
+gg						  Go to top
+G						  Go to end
+0						  Go to start of line
+$						  Go to end of line
+zz						  Center current line in screen
+
+gD						  Go to first occurrence (goto definition)
+*						  Go to next occurrence of word under cursor
+#						  Go to previous occurrence of word under cursor
+%						  Go to matching Bracket
+
+:w						  Write to current file (save)
+:w !sudo tee %			  Write to current file with root-permissions
+:q						  Close vim (without saving)
+:qa						  Close all windows
+:...!					  Force a command (e.g. quit with discarding changes ":q!")
+
+:Ex						  Start file explorer
+:Sex					  Explorer and tile window horizontally
+:Lex					  Explorer and tile window vertically
+:Tex					  Explorer in new tab
+
+:nohl					  Turn search highlighting off
+:set hls				  Turn search highlighting on
+:call AllFuncInNewTab()	* Show all Function declarations in this file in a new tab
+
+:tabnew					  Open file in new tab
+:tabnew %				  Open current file in a new tab
+:tabm					  Move current tab to end of tab list
+:tabm +x				  Move current tab x places to the right
+:tabm -x				  Move current tab x places to the left
+<c-PageUp>				* Previous Tab
+<c-PageDown>			* Next Tab
+
+:e %					  Reload current file
+:tabdo e				  Reload all files in all tabs
