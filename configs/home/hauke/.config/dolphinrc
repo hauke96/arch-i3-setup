@@ -1,0 +1,87 @@
+[CompactMode]
+FontWeight=50
+
+[Desktop Entry]
+DefaultProfile=Hauke.profile
+
+[DetailsMode]
+FontWeight=50
+PreviewSize=16
+
+[Favorite Profiles]
+Favorites=
+
+[General]
+BrowseThroughArchives=true
+GlobalViewProps=true
+HomeUrl=/home/hauke/
+RememberOpenedTabs=false
+SplitView=true
+Version=200
+ViewPropsTimestamp=2018,8,26,2,58,18
+
+[IconsMode]
+FontWeight=50
+
+[KPropertiesDialog]
+HDMI-A-0 DVI-D-0 Height 1080=520
+HDMI-A-0 DVI-D-0 Height 1920x1080=544
+HDMI-A-0 DVI-D-0 Width 1920=635
+HDMI-A-0 DVI-D-0 Width 1920x1080=635
+Height 1080=518
+Width 1920=635
+
+[MainWindow]
+HDMI-A-0 DVI-D-0 Height 1080=1015
+HDMI-A-0 DVI-D-0 Height 1920x1080=1015
+HDMI-A-0 DVI-D-0 Width 1920=1920
+HDMI-A-0 DVI-D-0 Width 1920x1080=1920
+HDMI-A-0 DVI-D-0 Window-Maximized 1080x1920=true
+HDMI-A-0 DVI-D-0 Window-Maximized 1920x1080=true
+HDMI-A-0 DVI-D-0 XPosition=0
+HDMI-A-0 DVI-D-0 XPosition 1920x1080=0
+HDMI-A-0 DVI-D-0 YPosition=29
+HDMI-A-0 DVI-D-0 YPosition 1920x1080=29
+HDMI-A-0 Height 1080=1015
+HDMI-A-0 Width 1920=1920
+HDMI-A-0 XPosition=0
+HDMI-A-0 YPosition=29
+Height 1080=1015
+MenuBar=Disabled
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAwAAAAAAAADWAAACh/wCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAoBAAAD+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAuAAAChwAAAF0BAAADAAAAAQAAALgAAAPR/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAACYAAAPRAAAACgEAAAMAAAADAAAHgAAAAL78AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAHgAAAAAoBAAADAAADGQAAAocAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+Virtual1 Height 1024x768=693
+Virtual1 Height 1440x900=825
+Virtual1 Width 1024x768=1008
+Virtual1 Width 1440x900=1424
+Virtual1 XPosition 1024x768=8
+Virtual1 XPosition 1440x900=8
+Virtual1 YPosition 1024x768=67
+Virtual1 YPosition 1440x900=67
+Width 1920=1920
+Window-Maximized 1080x1920=true
+Window-Maximized 900x1440=true
+
+[Notification Messages]
+ConfirmTrash=true
+
+[Open-with settings]
+CompletionMode=1
+History=vlc,qgis,josm,fire,draw,digi,darkt,digik,digika,Digikam,kate,thund,viking,kwri,kwrite
+
+[PreviewSettings]
+Plugins=audiothumbnail,windowsexethumbnail,comicbookthumbnail,djvuthumbnail,marble_thumbnail_shp,exrthumbnail,marble_thumbnail_geojson,pothumbnail,marble_thumbnail_gpx,marble_thumbnail_kml,marble_thumbnail_kmz,kraorathumbnail,mltpreview,mobithumbnail,marble_thumbnail_osm,designerthumbnail,fontthumbnail
+
+[Search]
+Location=Everywhere
+
+[SettingsDialog]
+Height 1080=450
+Width 1920=681
+
+[ViewPropertiesDialog]
+Height 1080=704
+Virtual1 Height 1440x900=289
+Virtual1 Width 1440x900=480
+Width 1920=367
