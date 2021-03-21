@@ -14,7 +14,7 @@ function create_user()
 
 	# We need sudo already here to add the user to the sudoers file
 	echo "Install sudo"
-	pacman -S --needed sudo
+	pacman --noconfirm -S --needed sudo
 	echo "Installing sudo done"
 
 	if ! grep -q "^$TARGET_USER" /etc/sudoers
@@ -61,7 +61,7 @@ function setup_pacman()
 		echo "Multilib already added"
 	fi
 
-	pacman -Syu	
+	pacman --noconfirm -Syu	
 }
 
 

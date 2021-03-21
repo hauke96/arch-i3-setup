@@ -7,7 +7,7 @@ function setup_aur()
 {
 	assert_not_root
 
-	sudo pacman -S --needed git base-devel
+	sudo pacman --noconfirm -S --needed git base-devel
 	
 	export BUILDDIR=/tmp/makepkg
 	export PKGDEST=.
@@ -36,7 +36,7 @@ function setup_printer()
 #	PRINT_MANAGER="kcmshell5 kcm_printer_manager"
 	
 	# Just to make sure driver package is installed which is usually installed via packages/aur/utils.txt
-	su $TARGET_USER -c "yay -S --needed brother-hl5450dn"
+	su $TARGET_USER -c "yay --noconfirm -S --needed brother-hl5450dn"
 	
 	systemctl enable cups-browsed.service
 	systemctl start cups-browsed.service

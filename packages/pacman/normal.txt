@@ -2,7 +2,7 @@
 
 # Internet
 akregator
-filezille
+filezilla
 firefox
 firewalld
 network-manager-applet
@@ -31,7 +31,7 @@ pulseaudio
 
 # Documents
 okular
-scanlite
+skanlite
 xournalpp
 
 # Misc
