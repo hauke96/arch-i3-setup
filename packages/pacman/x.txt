@@ -5,6 +5,7 @@ xorg-xinit
 
 # For Qt5 Apps to be styled correctly
 qt5ct
+breeze
 
 # Set the the locale for X11
 libxkbcommon-x11

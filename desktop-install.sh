@@ -83,7 +83,7 @@ function install_all_drivers()
 function install_i3()
 {
 	pacman_install "x"
-	localectl --no-convert set-x11-keymap de
+	sudo localectl --no-convert set-x11-keymap de
 
 	aur_install "i3"
 }
@@ -97,99 +97,6 @@ function install_configs()
 	cd ..
 
 	echo "Installed configs"
-}
-
-# TODO
-function install_apps()
-{
-	assert_root
-
-	# System
-	pacman -S --needed \
-		htop \
-		baobab \
-		mtr \
-		openssh \
-		gnu-netcat \
-		gnome-calculator \
-		ufw \
-		zip
-	
-	# Development
-	pacman -S --needed \
-		git \
-		tk \
-		go \
-		openjdk8-src \
-		jdk8-openjdk \
-		hugo \
-		eclipse-java \
-		liteide \
-		atom \
-		hunspell-de \
-		hunspell-en_US \
-		virt-manager \
-		qemu \
-		ovmf \
-		texlive-core \
-		texlive-bibtexextra \
-		texlive-fontsextra \
-		texlive-langextra \
-		texlive-latexextra \
-		texlive-science \
-		texstudio
-	yay -S --needed latex-pgfplots
-	su $TARGET_USER -c "yay -S qemu-kvm"
-
-	# Internet
-	pacman -S --needed \
-		openvpn \
-		firefox \
-		thunderbird \
-		telegram-desktop \
-		hexchat \
-		rsync \
-		wget \
-		keepassxc \
-		xdotool \
-		filezilla \
-		ktorrent \
-		kdeconnect \
-		sshfs
-	su $TARGET_USER -c "yay -S --needed signal"
-
-	# Gaming
-	pacman -S --needed \
-		steam \
-		lib32-libxtst \
-		lib32-libxrandr \
-		lib32-glib2 \
-		lib32-libpulse \
-		lib32-gtk2 \
-		lib32-libva \
-		lib32-libvdpau \
-		lib32-openal
-
-	# Multimedia
-	pacman -S --needed \
-		vlc \
-		gimp \
-		darktable \
-		gwenview \
-		okular \
-		imagemagick \
-		ffmpeg \
-		pavucontrol \
-		skanlite
-
-	su $TARGET_USER -c "yay -S --needed spotify"
-}
-
-# TODO
-function install_gpg_configs()
-{
-	mkdir -p ~/.gnupg
-	cp ./gpg-agent.conf ~/.gnupg/
 }
 
 # 1. Setup AUR

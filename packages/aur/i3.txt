@@ -2,11 +2,10 @@ i3-gaps
 i3lock-color
 polybar
 rofi
+nitrogen
 
 # Composer: Fork with rounded edges and better blur
 picom-ibhagwan-git
-
-nitrogen
 
 # Font for icons in polybar
 siji-git
