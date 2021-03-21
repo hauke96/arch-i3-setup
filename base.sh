@@ -32,7 +32,7 @@ function assert_not_root()
 function pacman_install()
 {
 	echo "Start pacman installation of $1"
-	sudo pacman -S --needed $(cat ./packages/pacman/$1.txt | grep -v "^#" | tr '\n' ' ')
+	sudo pacman --noconfirm -S --needed $(cat ./packages/pacman/$1.txt | grep -v "^#" | tr '\n' ' ')
 	echo "Installed $1"
 }
 
@@ -42,7 +42,7 @@ function aur_install()
 	assert_not_root
 
 	echo "Start AUR installation of $1"
-	yay -S --needed $(cat ./packages/aur/$1.txt | grep -v "^#" | tr '\n' ' ')
+	yay --noconfirm -S --needed $(cat ./packages/aur/$1.txt | grep -v "^#" | tr '\n' ' ')
 	echo "Installed $1"
 }
 
