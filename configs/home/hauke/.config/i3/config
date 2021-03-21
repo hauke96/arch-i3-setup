@@ -65,7 +65,8 @@ bindsym $mod+l exec i3lock \
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 #exec --no-startup-id nm-applet
-exec --no-startup-id polybar -r -c ~/.config/polybar/config bar
+#exec --no-startup-id polybar -r -c ~/.config/polybar/config bar
+exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id picom
 exec --no-startup-id nitrogen --restore
 

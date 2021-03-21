@@ -7,7 +7,7 @@ function setup_aur()
 {
 	assert_not_root
 
-	sudo pacman -S --needed git
+	sudo pacman -S --needed git base-devel
 	
 	export BUILDDIR=/tmp/makepkg
 	export PKGDEST=.

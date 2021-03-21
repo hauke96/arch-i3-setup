@@ -10,8 +10,9 @@ QScrollBar:vertical{
 }
 QScrollBar::handle{
   background: palette(light);
-  margin: 8px 8px 8px 8px;
-  border-radius: 4px;
+  margin: 8px 0px 8px 0px;
+  border: 16px solid transparent;
+  border-radius: 12px;
 }
 QScrollBar::handle:horizontal{
   min-height: 24px;

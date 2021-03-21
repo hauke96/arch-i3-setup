@@ -12,6 +12,11 @@ function create_user()
 
 	passwd $TARGET_USER
 
+	# We need sudo already here to add the user to the sudoers file
+	echo "Install sudo"
+	pacman -S --needed sudo
+	echo "Installing sudo done"
+
 	if ! grep -q "^$TARGET_USER" /etc/sudoers
 	then
 		chmod 0660 /etc/sudoers
