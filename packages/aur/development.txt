@@ -1,0 +1,12 @@
+# Additional development applications
+
+# Android
+android-studio
+fdroidserver
+
+# Go
+goland
+
+# Web
+webstorm
+postman-bin

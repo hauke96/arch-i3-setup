@@ -1,0 +1,45 @@
+# These are normal things that are used probably every day
+
+# Internet
+akregator
+filezille
+firefox
+firewalld
+network-manager-applet
+networkmanager-pptp
+nmap
+openssh
+sshpass
+
+# Communication
+bogofilter
+kmail
+kontact
+signal-desktop
+telegram-desktop
+
+# OSM & GIS
+josm
+qgis
+
+# Multimedia
+gimp
+gwenview
+imagemagick
+pavucontrol
+pulseaudio
+
+# Documents
+okular
+scanlite
+xournalpp
+
+# Misc
+baobab
+bitcoin-qt
+dolphin
+dolphin-plugins
+keepassxc
+
+## Screenshots
+spectacle

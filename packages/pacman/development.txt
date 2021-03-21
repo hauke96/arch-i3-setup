@@ -1,0 +1,17 @@
+# Things I need to program (+ development.txt in AUR folder)
+
+# Java (some apps need older JDKs) & Android
+android-tools
+jdk11-openjdk
+jdk8-openjdk
+
+# Go
+go
+
+# Docker
+docker
+docker-compose
+
+# Misc
+dbeaver
+hugo

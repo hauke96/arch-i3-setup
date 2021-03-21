@@ -1,0 +1,6 @@
+# Some more normal applications
+
+spotify
+
+# VirtualBox
+vortualbox-ext-oracle

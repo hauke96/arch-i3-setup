@@ -1,5 +1,13 @@
-htop
+# Terminal stuff
 bash-completion
-man-db
-unzip
+htop
 konsole
+man-db
+
+# Misc
+gzip
+p7zip
+unzip
+
+# Printing
+cups-pdf
