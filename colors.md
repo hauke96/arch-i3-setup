@@ -6,7 +6,7 @@ Here you find hex value as well as RGB values used in the following files:
 * `~/.Xresources`
 * `~/.config/kdeglobals` (RGB)
 * `~/.config/i3/config`
-* '~/.config/gtk-3.0/gtk.css`
+* `~/.config/gtk-3.0/gtk.css`
 * `~/.config/polybar/config`
 * `~/.config/qt5ct/colors.hauke.conf`
 * `~/.local/share/rofi/themes/hauke.rasi`
