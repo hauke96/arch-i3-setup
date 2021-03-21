@@ -53,10 +53,10 @@ bindsym $mod+l exec i3lock \
 	--radius=200 \
 	--insidecolor=00000000 \
 	--linecolor=ffffff18 \
-	--ringcolor=a7bf1470 \
-	--keyhlcolor=a7bf14ff \
+	--ringcolor=aa961670 \
+	--keyhlcolor=aa9616ff \
 	--insidewrongcolor=00000000 \
-	--ringwrongcolor=bf1414a0 \
+	--ringwrongcolor=aa1616a0 \
 	--wrongtext="" \
 	--veriftext="" \
 	--noinputtext="" \
