@@ -11,6 +11,11 @@ The key components are:
 
 Well ... simply install Arch duh.
 
+And then these things:
+
+* Installed `sudo`
+* At least 4GB space at `/tmp`
+
 # 2. Installation
 
 This installs everything:
@@ -25,3 +30,15 @@ This installs everything:
 8. Optional: Reboot
 9. Log into your users account
 10. `startx`
+
+# 3. Afterwards
+
+Some more things are needed:
+
+* Setup SSH-Key
+* Setup GPG-Keys
+* Setup keepass database
+* Add mail accounts in `KMail`
+* Add firefox profile
+* Activate software that needs license key etc.
+* ...
