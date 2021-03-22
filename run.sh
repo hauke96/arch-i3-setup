@@ -11,7 +11,7 @@ source ./base.sh
 echo "Start system setup"
 ./system-setup.sh
 echo
-echo "System setup done. Continue with desktop installation."
+echo "System setup done."
 echo
 echo
 
