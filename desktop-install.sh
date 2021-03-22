@@ -115,3 +115,8 @@ setup_printer
 
 # 6. Copy all configs
 install_configs
+
+# 7. Clean up things
+
+# 7.1 Set java version so that JetBrains IDEs start
+sudo archlinux-java set java-11-openjdk
