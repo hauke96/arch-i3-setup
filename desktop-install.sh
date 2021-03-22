@@ -5,6 +5,12 @@ source ./base.sh
 # Setup AUR
 function setup_aur()
 {
+	if command -v yay > /dev/null
+	then
+		echo "AUR already set up"
+		return
+	fi
+
 	assert_not_root
 
 	sudo pacman --noconfirm -S --needed git base-devel
