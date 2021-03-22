@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 echo "Install Grub theme"
 
 echo "First mount EFI partition /dev/sda1 to /boot"
@@ -8,9 +10,11 @@ mount /dev/sda1 /boot
 THEME_DIR="/boot/grub/themes"
 THEME_NAME=Xenlism-Arch
 
+# If folder exists -> nothing to do here
+[[ -d ${THEME_DIR}/${THEME_NAME} ]] && exit 0
+
 # Create themes directory if not exists
 echo "Make sure the theme folder exists"
-[[ -d ${THEME_DIR}/${THEME_NAME} ]] && rm -rf ${THEME_DIR}/${THEME_NAME}
 mkdir -p "${THEME_DIR}/${THEME_NAME}"
 
 # Copy theme

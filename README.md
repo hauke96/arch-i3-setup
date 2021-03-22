@@ -18,8 +18,7 @@ Well ... simply install Arch duh.
 
 And then these things:
 
-* Installed `sudo`
-* At least 4GB space at `/tmp`
+* At least 5GB space at `/tmp`
 
 # 2. Installation
 
