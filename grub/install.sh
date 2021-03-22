@@ -5,7 +5,7 @@ set -e
 echo "Install Grub theme"
 
 # Check if boot partition mounted
-if grep -q "^/dev/sda1 " /proc/mounts
+if ! grep -q "^/dev/sda1 " /proc/mounts
 then
 	echo "Mount EFI partition /dev/sda1 to /boot"
 	mount /dev/sda1 /boot
