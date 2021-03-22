@@ -17,7 +17,9 @@ ssh-add -l | grep "4096 SHA256:M40DuLixU97SpvAqu02Il0jKthxDT5T9xwgC8iczBYU /home
 if [ "$?" == 1 ]; then
 	ssh-add
 	if [ "$?" != 0 ]; then
-		exit 1
+# Uncomment when key available:
+#		exit 1
+		echo "No SSH-Key added."
 	fi
 fi
 
