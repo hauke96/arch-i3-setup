@@ -61,7 +61,7 @@ function setup_pacman()
 		echo "Multilib already added"
 	fi
 
-	pacman --noconfirm -Syu	
+	pacman --noconfirm -Sy	
 }
 
 
