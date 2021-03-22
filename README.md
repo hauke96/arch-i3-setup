@@ -7,6 +7,11 @@ The key components are:
 * konsole
 * BreezeDark style with different colors
 
+# Notice
+
+1. This contains configs and files **I** like to use
+2. Some of the configs (e.g. the `/etc/fstab` or drivers) only fit to my system. You probably want to change these
+
 # 1. Requirement: Arch
 
 Well ... simply install Arch duh.
