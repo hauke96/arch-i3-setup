@@ -53,7 +53,7 @@ Some more things are needed:
 |:--|:--|
 | `run.sh` | Used to start the whole installation process |
 | `base.sh` | Not a standalone script. Contains important functions and variables. |
-| 'system-setup.sh` | Used internally to set up the system with pacman, AUR, locale, etc. |
+| `system-setup.sh` | Used internally to set up the system with pacman, AUR, locale, etc. |
 | `desktop-install.sh` | Used internally to install all the desktop enviroment things (i3, fonts, browser, IDEs, ...) |
 | `generate-package-lists.sh` | Generates lists of all currently installed packages. |
 | `find-changed-configs.sh` | Determines all config files that differ from the ones in `./configs/`. Use `--name-only` to just print the file names. |
