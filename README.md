@@ -22,7 +22,7 @@ This installs everything:
 
 1. Log in as `root`
 2. Install `git`
-3. `git clone https://hauke96/arch-i3-setup.git`
+3. `git clone https://github.com/hauke96/arch-i3-setup.git`
 4. `cd arch-i3-setup`
 5. Optional: Replace "hauke" and locale in the `base.sh`
 6. `./run.sh`
