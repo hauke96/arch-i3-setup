@@ -11,7 +11,11 @@ THEME_DIR="/boot/grub/themes"
 THEME_NAME=Xenlism-Arch
 
 # If folder exists -> nothing to do here
-[[ -d ${THEME_DIR}/${THEME_NAME} ]] && exit 0
+if [[ -d ${THEME_DIR}/${THEME_NAME} ]]
+then
+	echo "GRUB theming already installed. Abort."
+	exit 0
+fi
 
 # Create themes directory if not exists
 echo "Make sure the theme folder exists"
