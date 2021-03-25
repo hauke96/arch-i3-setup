@@ -41,6 +41,7 @@ Some more things are needed:
 
 * Adjust `nautilus`
 * Test audio
+* Check printer IP in `/etc/cups/printers.conf`
 * Setup SSH-Key
 * Setup GPG-Keys
 * Setup keepass database
