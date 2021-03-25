@@ -88,7 +88,12 @@ aur_install "utils"
 setup_printer
 
 # 6. Copy all configs
+
+# 6.1 Copy all files and overwrite existing ones
 install_configs
+
+# 6.2 Copy fstab without overriding existing configs
+cat ./fstab >> /etc/fstab
 
 # 7. Clean up things
 
