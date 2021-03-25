@@ -39,6 +39,8 @@ This installs everything:
 
 Some more things are needed:
 
+* Adjust `nautilus`
+* Test audio
 * Setup SSH-Key
 * Setup GPG-Keys
 * Setup keepass database
