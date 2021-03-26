@@ -87,14 +87,14 @@ floating_modifier $mod
 bindsym $mod+Return exec konsole
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym ctrl+q kill
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+space exec rofi -show run -theme hauke
+bindsym $mod+space --release exec rofi -show run -theme hauke
 
 # Change focus
 bindsym $mod+Left focus left
@@ -135,7 +135,8 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # make a screenshot
-bindsym --release $mod+x exec --no-startup-id import /home/hauke/Bilder/latest-screenshot.png
+#bindsym --release $mod+x exec --no-startup-id import /home/hauke/Bilder/latest-screenshot.png
+bindsym Print --no-startup-id spectacle
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -150,20 +151,20 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # Chnge Workspace
-bindsym $mod+Control+Left workspace prev
-bindsym $mod+Control+Right workspace next
+bindsym Mod1+Control+Left workspace prev
+bindsym Mod1+Control+Right workspace next
 
 # move focused container to workspace
-bindsym $mod+Ctrl+1 move container to workspace 1
-bindsym $mod+Ctrl+2 move container to workspace 2
-bindsym $mod+Ctrl+3 move container to workspace 3
-bindsym $mod+Ctrl+4 move container to workspace 4
-bindsym $mod+Ctrl+5 move container to workspace 5
-bindsym $mod+Ctrl+6 move container to workspace 6
-bindsym $mod+Ctrl+7 move container to workspace 7
-bindsym $mod+Ctrl+8 move container to workspace 8
-bindsym $mod+Ctrl+9 move container to workspace 9
-bindsym $mod+Ctrl+0 move container to workspace 10
+bindsym Ctrl+Mod1+1 move container to workspace 1
+bindsym Ctrl+Mod1+2 move container to workspace 2
+bindsym Ctrl+Mod1+3 move container to workspace 3
+bindsym Ctrl+Mod1+4 move container to workspace 4
+bindsym Ctrl+Mod1+5 move container to workspace 5
+bindsym Ctrl+Mod1+6 move container to workspace 6
+bindsym Ctrl+Mod1+7 move container to workspace 7
+bindsym Ctrl+Mod1+8 move container to workspace 8
+bindsym Ctrl+Mod1+9 move container to workspace 9
+bindsym Ctrl+Mod1+0 move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
