@@ -5,6 +5,7 @@ akregator
 filezilla
 firefox
 firewalld
+kdeconnect
 network-manager-applet
 networkmanager-pptp
 nmap
