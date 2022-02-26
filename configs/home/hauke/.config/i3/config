@@ -9,7 +9,9 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+# Win = Mod4
+# Alt = Mod1
+set $mod Mod1
 
 # Gaps
 gaps inner 8
@@ -19,7 +21,7 @@ gaps top 41
 # Border
 
 # Only works with i3-gaps-rounded:
-#border_radius 10
+# border_radius 10
 
 # Remove title bar
 for_window [class=".*"] border pixel 1
@@ -49,21 +51,23 @@ font pango:hack 8
 # Lock screen
 bindsym $mod+l exec i3lock \
 	-i ~/Bilder/lock.png \
+	--tiling \
+	-c 00000000 \
 	--indicator \
 	--ring-width=1.0 \
 	--radius=200 \
-	--insidecolor=00000000 \
-	--linecolor=ffffff18 \
-	--ringcolor=aa961670 \
-	--keyhlcolor=aa9616ff \
-	--insidewrongcolor=00000000 \
-	--ringwrongcolor=aa1616a0 \
-	--wrongtext="" \
-	--veriftext="" \
-	--noinputtext="" \
-	--locktext="" \
-	--insidevercolor=00000000 \
-	--ringvercolor=1464bf70
+	--inside-color=00000000 \
+	--line-color=ffffff18 \
+	--ring-color=aa961670 \
+	--keyhl-color=aa9616ff \
+	--insidewrong-color=00000000 \
+	--ringwrong-color=aa1616a0 \
+	--wrong-text="" \
+	--verif-text="" \
+	--noinput-text="" \
+	--lock-text="" \
+	--insidever-color=00000000 \
+	--ringver-color=1464bf70
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 #exec --no-startup-id nm-applet
@@ -94,7 +98,7 @@ bindsym ctrl+q kill
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+space --release exec rofi -show run -theme hauke
+bindsym $mod+space --release exec "rofi -show combi -combi-modi drun,run,filebrowser -theme hauke"
 
 # Change focus
 bindsym $mod+Left focus left
@@ -151,20 +155,20 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # Chnge Workspace
-bindsym Mod1+Control+Left workspace prev
-bindsym Mod1+Control+Right workspace next
+bindsym $mod+Control+Left workspace prev
+bindsym $mod+Control+Right workspace next
 
 # move focused container to workspace
-bindsym Ctrl+Mod1+1 move container to workspace 1
-bindsym Ctrl+Mod1+2 move container to workspace 2
-bindsym Ctrl+Mod1+3 move container to workspace 3
-bindsym Ctrl+Mod1+4 move container to workspace 4
-bindsym Ctrl+Mod1+5 move container to workspace 5
-bindsym Ctrl+Mod1+6 move container to workspace 6
-bindsym Ctrl+Mod1+7 move container to workspace 7
-bindsym Ctrl+Mod1+8 move container to workspace 8
-bindsym Ctrl+Mod1+9 move container to workspace 9
-bindsym Ctrl+Mod1+0 move container to workspace 10
+bindsym Ctrl+$mod+1 move container to workspace 1
+bindsym Ctrl+$mod+2 move container to workspace 2
+bindsym Ctrl+$mod+3 move container to workspace 3
+bindsym Ctrl+$mod+4 move container to workspace 4
+bindsym Ctrl+$mod+5 move container to workspace 5
+bindsym Ctrl+$mod+6 move container to workspace 6
+bindsym Ctrl+$mod+7 move container to workspace 7
+bindsym Ctrl+$mod+8 move container to workspace 8
+bindsym Ctrl+$mod+9 move container to workspace 9
+bindsym Ctrl+$mod+0 move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
