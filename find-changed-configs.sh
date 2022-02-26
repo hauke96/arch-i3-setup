@@ -4,12 +4,12 @@
 # Use  --name-only  to only show file names of changed config files.
 
 cd configs
-ALL_FILES="$(find . -type f | tr '\n' ' ')"
+ALL_FILES="$(find . -type f | sed "s/^\.\///g" | tr '\n' ' ')"
 cd ..
 
 for FILE in $ALL_FILES
 do
-	DIFF=$(diff $FILE /$FILE)
+	DIFF=$(diff configs/$FILE /$FILE 2>/dev/null)
 
 	if [ -n "$(echo "$DIFF" | tr -d "[:space:]*")" ]
 	then
