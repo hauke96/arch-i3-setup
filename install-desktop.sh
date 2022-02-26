@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./base.sh
+source ./install-util.sh
 
 # Setup AUR
 function setup_aur()

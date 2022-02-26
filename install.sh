@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./base.sh
+source ./install-util.sh
 
 # ############################################################################
 # 
@@ -9,7 +9,7 @@ source ./base.sh
 # ############################################################################
 
 echo "Start system setup"
-./system-setup.sh
+./install-system.sh
 echo
 echo "System setup done."
 echo
@@ -40,7 +40,7 @@ echo "Switch to $TARGET_USER home folder"
 cd /home/$TARGET_USER/setup
 
 echo "Start desktop installation script"
-sudo -u $TARGET_USER ./desktop-install.sh
+sudo -u $TARGET_USER ./install-desktop.sh
 echo "Desktop installation done. Nothing left to do."
 
 echo
