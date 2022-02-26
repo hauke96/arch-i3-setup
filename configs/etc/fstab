@@ -1,20 +1,20 @@
 # /dev/sda1
-#UUID=043a7dea-8086-4cbd-bbf1-fbfb7129a490	/         	ext4      	rw,relatime	0 1
+UUID=043a7dea-8086-4cbd-bbf1-fbfb7129a490	/         	ext4      	rw,relatime	0 1
 
 # /dev/sda2
-#UUID=0d7d60ae-53bc-4e11-8d5d-56f29eba200e	/home     	ext4      	rw,relatime	0 2
+UUID=0d7d60ae-53bc-4e11-8d5d-56f29eba200e	/home     	ext4      	rw,relatime	0 2
 
 # /dev/sda3
-#UUID=C61C-454E      	/boot/EFI     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro	0 2
+UUID=C61C-454E      	/boot/EFI     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro	0 2
 
 # Custom
 UUID=32a3fb6c-703e-480e-919e-385c95016dce		/						ext4	errors=remount-ro							0 1
 #UUID=eaadb7d0-4dba-46a7-85ac-0fbf81821840		/media/hauke			ext4	defaults,skip_balance						0 1
 UUID=1cf8867d-0199-4c8b-94c1-bd29c277783f		/media/hauke			ext4	defaults									0 1
 #UUID=03ea5b37-c934-411b-9785-be55f5f90509		/media/bitcoin			btrfs	defaults									0 1
-UUID=BCB21D2EB21CEEA0							/media/windows_ssd		ntfs	auto,uid=1000,gid=1000,errors=remount-ro	0
+#UUID=BCB21D2EB21CEEA0							/media/windows_ssd		ntfs	auto,uid=1000,gid=1000,errors=remount-ro	0
 #UUID=cdc6f1f5-4e63-41ec-a93b-ea459800c1e3		/media/linux_ssd		ext4	errors=remount-ro							0 1
-UUID=3dbcb822-fac1-4e3f-9867-83705141288a		/media/programme/		btrfs	defaults									0 1
+#UUID=3dbcb822-fac1-4e3f-9867-83705141288a		/media/programme/		btrfs	defaults									0 1
 #LABEL=Externe\x20Festplatte					/media/externe			ntfs	auto,uid=1000,gid=1000,errors=remount-ro	0
 
 # NFS export vom ZFS-Verzeichnis:
