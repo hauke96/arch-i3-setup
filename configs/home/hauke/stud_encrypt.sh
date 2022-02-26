@@ -1,3 +1,5 @@
+#!/bin/bash
+
 DATE=$(date +%Y-%m-%d)
 NAME_ZIP='Studium_'$DATE'.zip'
 

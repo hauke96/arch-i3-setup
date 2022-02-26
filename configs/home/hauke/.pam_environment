@@ -1,1 +1,4 @@
 SSH_AUTH_SOCK DEFAULT="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+
+# Java font anti-aliasing with newer fontconfig version
+_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'

@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "Verfügbare Online-Versionen:"
 wget --spider -r --no-parent http://hauke-stieler.de/studium/backups/ 2>&1 | grep -e "gpg$" | awk -F 'hauke-stieler.de/studium/backups/Studium_|.zip.gpg' '{print "> "$2}'
 
