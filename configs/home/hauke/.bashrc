@@ -20,9 +20,9 @@ function ctrl_c() {
 ssh-add -l | grep "4096 SHA256:M40DuLixU97SpvAqu02Il0jKthxDT5T9xwgC8iczBYU /home/hauke/.ssh/id_rsa (RSA)" &>/dev/null
 if [ "$?" == 1 ]; then
 	ssh-add
-	if [ "$?" != 0 ]; then
-		exit 1
-	fi
+#	if [ "$?" != 0 ]; then
+#		exit 1
+#	fi
 fi
 
 # For GPG pinentry-tty
@@ -57,10 +57,10 @@ alias stm='ssh -p 17642 stm@stm.hauke-stieler.de'
 
 alias wine='~/.steam/steam/steamapps/common/Proton\ 3.16/dist/bin/wine'
 
-#alias ls='ls --color=auto'
-#alias ll='ls -alh --color=always'
-alias ll='lsd --long --classify --all --group-dirs first'
-alias ls='ll --sizesort'
+alias ls='ls --color=auto'
+alias ll='ls -alh --color=always'
+#alias ll='lsd --long --classify --all --group-dirs first'
+#alias ls='ll --sizesort'
 alias grep='grep --color=always'
 alias df='df -hBG'
 alias diff='git diff --no-index'
