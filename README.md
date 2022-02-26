@@ -9,16 +9,13 @@ The key components are:
 
 # Notice
 
-1. This contains configs and files **I** like to use
-2. Some of the configs (e.g. the `/etc/fstab` or drivers) only fit to my system. You probably want to change these
+1. This contains configs and files **I** like to use.
+2. Some of the configs (e.g. the `/etc/fstab` or drivers) only fit to my system. You probably want to change these.
 
-# 1. Requirement: Arch
+# 1. Prerequisites
 
-Well ... simply install Arch duh.
-
-And then these things:
-
-* At least 5GB space at `/tmp`
+1. Well ... simply install Arch duh.
+2. Make sure `/tmp` has at least 5GB space → `mount -o remount,size=5G /tmp/`
 
 # 2. Installation
 
@@ -28,16 +25,16 @@ This installs everything:
 2. Install `git`
 3. `git clone https://github.com/hauke96/arch-i3-setup.git`
 4. `cd arch-i3-setup`
-5. Optional: Replace "hauke" and locale in the `base.sh`
-6. `./run.sh`
+5. Optional: Replace "hauke" and locale in the `install-util.sh`
+6. Start main installation: `./install.sh`
 7. Follow instructions
-8. Optional: Reboot
+8. Recommended: Reboot
 9. Log into your users account
 10. `startx`
 
 # 3. Afterwards
 
-Some more things are needed:
+Some more things are needed to have a fully working system with all necessary data, profiles, etc.
 
 * Adjust `nautilus`
 * Test audio
@@ -51,6 +48,8 @@ Some more things are needed:
 * ...
 
 # Scripts
+
+This repo contains some scripts:
 
 | Script name | Description |
 |:--|:--|
