@@ -3,6 +3,7 @@ i3lock-color
 polybar
 rofi
 nitrogen
+dunst
 
 # Composer: Fork with rounded edges and better blur
 picom-ibhagwan-git

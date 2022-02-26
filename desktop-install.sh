@@ -36,38 +36,12 @@ function install_driver_graphics()
 # Printer driver. Uses KDE's kcm_printer_manager.
 function setup_printer()
 {
-#	assert_root
-#
-#	LOG=${0##*/}.log
-#	PRINT_MANAGER="kcmshell5 kcm_printer_manager"
-	
 	# Just to make sure driver package is installed which is usually installed via packages/aur/utils.txt
 	yay --noconfirm -S --needed brother-hl5450dn
-	
+
 	sudo systemctl enable cups-browsed.service
-	sudo systemctl start cups-browsed.service
-	
-#	echo "Hinweis:"
-#	echo "Drucker muss noch eingerichtet werden! Wie folgt vorgehen:"
-#	echo 
-#	echo "==="
-#	echo "1. Drucker-URL finden (z.B. 'lpd://BRN30055C8ADAEE/BINARY_P1'):"
-#	echo "==="
-#	lpinfo -v
-#	echo
-#	echo "==="
-#	echo "2. Gleich öffnet sich die Verwaltung, da dann einen neuen Drucker hinzufügen"
-#	echo "==="
-#	echo "3. Für den Drucker die 'driverless' Variante wählen und URL eintragen (die von Schritt 1)"
-#	echo "==="
-#	echo "4. Treiber auswählen"
-#	echo "==="
-#	echo "5. Fertig, ggf. Testseite drucken"
-#	echo "==="
-#	echo
-#	echo "Weiter mit zu '$PRINT_MANAGER' ENTER..."
-#	read
-#	$PRINT_MANAGER
+
+	# Necessary config files will be copied later. Therefore the cups-browsed service will not be started here.
 }
 
 # i3 and required packages to make everything fancy *.*
@@ -114,9 +88,17 @@ aur_install "utils"
 setup_printer
 
 # 6. Copy all configs
+
+# 6.1 Copy all files and overwrite existing ones
 install_configs
+
+# 6.2 Copy fstab without overriding existing configs
+cat ./fstab >> /etc/fstab
 
 # 7. Clean up things
 
 # 7.1 Set java version so that JetBrains IDEs start
 sudo archlinux-java set java-11-openjdk
+
+# 7.2 Start CUPS after configs have been copied
+sudo systemctl start cups-browsed.service
