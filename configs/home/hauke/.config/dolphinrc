@@ -24,6 +24,9 @@ ViewPropsTimestamp=2018,8,26,2,58,18
 [IconsMode]
 FontWeight=50
 
+[InformationPanel]
+previewsShown=false
+
 [KPropertiesDialog]
 HDMI-A-0 DVI-D-0 Height 1080=520
 HDMI-A-0 DVI-D-0 Height 1920x1080=588
