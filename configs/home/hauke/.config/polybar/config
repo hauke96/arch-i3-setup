@@ -36,7 +36,7 @@ height = 35
 #offset-x = 50%:-400px
 ;offset-y = 10
 padding = 2
-radius = 10
+#radius = 10
 ;fixed-center = true
 
 background = ${colors.background}
