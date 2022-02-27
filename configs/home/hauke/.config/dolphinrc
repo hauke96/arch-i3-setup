@@ -7,6 +7,7 @@ DefaultProfile=Hauke.profile
 [DetailsMode]
 FontWeight=50
 PreviewSize=16
+UseShortRelativeDates=false
 
 [Favorite Profiles]
 Favorites=
@@ -68,7 +69,7 @@ CompletionMode=1
 History=calc,dbea,vlc,qgis,josm,fire,draw,digi,darkt,digik,digika,Digikam,kate,thund,viking
 
 [PreviewSettings]
-Plugins=audiothumbnail,windowsexethumbnail,comicbookthumbnail,djvuthumbnail,marble_thumbnail_shp,exrthumbnail,marble_thumbnail_geojson,pothumbnail,marble_thumbnail_gpx,marble_thumbnail_kml,marble_thumbnail_kmz,kraorathumbnail,mltpreview,mobithumbnail,marble_thumbnail_osm,designerthumbnail,fontthumbnail
+Plugins=
 
 [Search]
 What=Content
