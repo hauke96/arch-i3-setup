@@ -140,7 +140,7 @@ bindsym $mod+a focus parent
 
 # make a screenshot
 #bindsym --release $mod+x exec --no-startup-id import /home/hauke/Bilder/latest-screenshot.png
-bindsym Print --no-startup-id spectacle
+bindsym Print exec --no-startup-id "spectacle -g"
 
 # switch to workspace
 bindsym $mod+1 workspace 1
