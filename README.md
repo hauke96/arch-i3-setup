@@ -55,6 +55,7 @@ This repo contains some scripts:
 |:--|:--|
 | `generate-package-lists.sh` | Generates lists of all currently installed packages. |
 | `find-changed-configs.sh` | Determines all config files that differ from the ones in `./configs/`. Use `--name-only` to just print the file names. |
+| `packages-diff.sh` | Show a diff view of all installed packages and all packages registered in this repo under `./packages/`. |
 | `install.sh` | Used to start the whole installation process |
 | `install-util.sh` | Not a standalone script. Contains important functions and variables. |
 | `install-system.sh` | Used internally to set up the system with pacman, AUR, locale, etc. |
