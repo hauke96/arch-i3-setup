@@ -19,8 +19,10 @@ THEME_NAME=Xenlism-Arch
 # If folder exists -> nothing to do here
 if [[ -d ${THEME_DIR}/${THEME_NAME} ]]
 then
-	echo "GRUB theming already installed. Abort."
-	exit 0
+#	echo "GRUB theming already installed. Abort."
+	echo "GRUB theme already installed -> clean up"
+	rm -rf "${THEME_DIR}/${THEME_NAME}"
+#	exit 0
 fi
 
 # Create themes directory if not exists
@@ -36,10 +38,15 @@ cp -a ${THEME_NAME}/* ${THEME_DIR}/${THEME_NAME}
 echo "Backup default grub file"
 cp -an /etc/default/grub /etc/default/grub.bak
 
-echo "Add GRUB_THEME entry to default grub file"
+echo "Remove old GRUB_THEME entry to default grub file"
 grep "GRUB_THEME=" /etc/default/grub 2>&1 >/dev/null && sed -i '/GRUB_THEME=/d' /etc/default/grub
+echo "Remove old GRUB_GFXMODE entry to default grub file"
+grep "GRUB_GFXMODE=" /etc/default/grub 2>&1 >/dev/null && sed -i '/GRUB_GFXMODE=/d' /etc/default/grub
 
+echo "Add GRUB_THEME entry to default grub file"
 echo "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"" >> /etc/default/grub
+echo "Add GRUB_GFXMODE entry to default grub file"
+echo "GRUB_GFXMODE=\"1920x1080x32\"" >> /etc/default/grub
 
 # Update grub config
 echo "Regenerate grub config"
