@@ -71,6 +71,7 @@ setup_aur
 install_driver_graphics
 pacman_install "driver-graphics"
 pacman_install "driver-wacom"
+pacman_install "driver-filesystem"
 
 # 3. Install basic desktop packages and utilities
 install_i3

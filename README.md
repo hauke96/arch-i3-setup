@@ -62,3 +62,22 @@ This repo contains some scripts:
 | `install-desktop.sh` | Used internally to install all the desktop enviroment things (i3, fonts, browser, IDEs, ...) |
 
 Only use the first three scripts, all others (`install-...`) are internal scripts.
+
+# Development
+
+The `install-...` scripts structure the tasks of the installation process: Installing the system, grub and the desktop + user applications.
+
+In the `./packages/` folder, you'll find different `.txt` files with all packages that should be installed in the last step (which is `install-desktop.sh`).
+
+## Add a package
+
+Just add a new line in an *existing* file.
+
+## Add package file
+
+Adding a new package file requires two steps:
+
+1. Add the file with its package names in it.
+2. Add an entry in the `install-desktop.sh' file similar to the existing ones.
+
+

@@ -8,6 +8,7 @@ man-db
 gzip
 p7zip
 unzip
+which
 
 # Printing
 cups-pdf

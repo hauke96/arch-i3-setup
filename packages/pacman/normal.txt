@@ -11,6 +11,7 @@ networkmanager-pptp
 nmap
 openssh
 sshpass
+rsync
 
 # Communication
 bogofilter
@@ -25,12 +26,14 @@ qgis
 
 # Multimedia
 gimp
+kcolorchooser
 gwenview
 imagemagick
 pavucontrol
 pulseaudio
 
 # Documents
+kate
 okular
 skanlite
 xournalpp
