@@ -37,6 +37,7 @@ kate
 okular
 skanlite
 xournalpp
+libreoffice-still-de
 
 # Misc
 baobab
