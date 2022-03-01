@@ -1,14 +1,17 @@
-# -- THEME AUTO-WRITTEN DO NOT EDIT
-include "/usr/share/themes/Breeze-Dark/gtk-2.0/gtkrc"
+gtk-cursor-theme-size=24
+gtk-enable-animations=0
 
-style "user-font" {
-	font_name = "DejaVu Sans 9"
-}
+# File created by KDE Gtk Config
+# Configs for GTK2 programs 
 
-widget_class "*" style "user-font"
 
-gtk-font-name="DejaVu Sans 9"
+gtk-font-name="Noto Sans,  10"
+gtk-theme-name="Breeze-Dark"
+gtk-icon-theme-name="breeze-dark"
+gtk-fallback-icon-theme="Adwaita"
+gtk-cursor-theme-name="breeze_cursors"
+gtk-toolbar-style=3
+gtk-menu-images=1
+gtk-button-images=1
+gtk-primary-button-warps-slider=0
 
-include "/home/hauke/.gtkrc.mine"
-
-# -- THEME AUTO-WRITTEN DO NOT EDIT
