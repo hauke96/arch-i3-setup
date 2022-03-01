@@ -1,5 +1,6 @@
 # For QT style
 export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_STYLE_OVERRIDE="kvantum"
 export XDG_CURRENT_DESKTOP=KDE
 
 # Set DISPLAY variable in systemd. Needed for e.g. dunst.
