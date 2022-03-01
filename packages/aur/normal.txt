@@ -1,6 +1,6 @@
 # Some more normal applications
-
 spotify
+portfolio-performance-bin
 
 # VirtualBox
 virtualbox-ext-oracle
