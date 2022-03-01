@@ -27,10 +27,10 @@ gaps top 41
 for_window [class=".*"] border pixel 1
 
 # Colors
+client.focused #aa9616 #aa9616 #222222 #aa9616 #ffde21
 # client.focused	#6f800d #434d08 #ffffff #a7bf14 #434d08
 # client.focused #434d08 #434d08 #dddddd #a7bf14 #434d08
-client.focused #aa9616 #aa9616 #222222 #aa9616 #ffde21
-#client.focused #ffd900 #ffd900 #222222 #ffd900 #ffd900
+# client.focused #ffd900 #ffd900 #222222 #ffd900 #ffd900
 
 # No borders
 #set_from_resource $primaryDark primaryDark #f00
