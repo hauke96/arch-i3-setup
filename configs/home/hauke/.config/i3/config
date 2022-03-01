@@ -98,7 +98,8 @@ bindsym ctrl+q kill
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+space --release exec "rofi -show combi -combi-modi drun,run,filebrowser -theme hauke"
+bindsym $mod+space --release exec "rofi -show combi -combi-modi drun,run,file-browser-extended -file-browser-dir /home/hauke -file-browser-depth 0 -theme hauke"
+#bindsym $mod+space --release exec "rofi -show combi -combi-modi drun,run,filebrowser -theme hauke"
 
 # Change focus
 bindsym $mod+Left focus left
