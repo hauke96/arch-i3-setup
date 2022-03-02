@@ -2,7 +2,6 @@ i3-gaps
 i3lock-color
 polybar
 rofi
-rofi-file-browser-extended-git
 nitrogen
 dunst
 
