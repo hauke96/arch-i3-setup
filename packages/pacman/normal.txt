@@ -12,6 +12,8 @@ nmap
 openssh
 sshpass
 rsync
+# Needed for xdg-open which needs kfmclient which is part of konqueror:
+konqueror
 
 # Communication
 bogofilter
