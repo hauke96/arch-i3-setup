@@ -54,21 +54,28 @@ set $LockScreen i3lock \
 	--tiling \
 	-c 00000000 \
 	--indicator \
-	--ring-width=1.0 \
+	--ring-width=2.0 \
 	--radius=200 \
 	--inside-color=00000000 \
-	--line-color=ffffff18 \
-	--ring-color=aa961670 \
-	--keyhl-color=aa9616ff \
+	--insidever-color=00000000 \
 	--insidewrong-color=00000000 \
+	--line-color=ffffff30 \
+	--ring-color=aa9616a0 \
 	--ringwrong-color=aa1616a0 \
+	--ringver-color=1464bf70 \
+	--keyhl-color=aa9616ff \
 	--wrong-text="" \
 	--verif-text="" \
 	--noinput-text="" \
 	--lock-text="" \
-	--insidever-color=00000000 \
-	--ringver-color=1464bf70
-bindsym $mod+l $LockScreen
+	--clock \
+	--time-color=a4a4a4 \
+	--date-color=a4a4a4 \
+	--time-font=Hack \
+	--date-font=Hack \
+	--time-pos="x+960:170"
+
+bindsym $mod+l exec $LockScreen
 bindsym $mod+s exec $LockScreen && systemctl suspend
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
