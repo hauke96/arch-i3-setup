@@ -17,6 +17,8 @@ rsync
 bogofilter
 kmail
 kontact
+korganizer
+kdepim-addons
 signal-desktop
 telegram-desktop
 
@@ -44,6 +46,7 @@ baobab
 bitcoin-qt
 dolphin
 dolphin-plugins
+kde-cli-tools
 keepassxc
 
 ## Screenshots
