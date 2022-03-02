@@ -68,7 +68,7 @@ set $LockScreen i3lock \
 	--verif-text="" \
 	--noinput-text="" \
 	--lock-text="" \
-	--clock \
+	--force-clock \
 	--time-color=a4a4a4 \
 	--date-color=a4a4a4 \
 	--time-font=Hack \
