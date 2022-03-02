@@ -49,7 +49,7 @@ client.focused #aa9616 #aa9616 #222222 #aa9616 #ffde21
 font pango:hack 8
 
 # Lock screen
-bindsym $mod+l exec i3lock \
+set $LockScreen i3lock \
 	-i ~/Bilder/lock.png \
 	--tiling \
 	-c 00000000 \
@@ -68,6 +68,8 @@ bindsym $mod+l exec i3lock \
 	--lock-text="" \
 	--insidever-color=00000000 \
 	--ringver-color=1464bf70
+bindsym $mod+l $LockScreen
+bindsym $mod+s exec $LockScreen && systemctl suspend
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 #exec --no-startup-id nm-applet
@@ -123,7 +125,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+#bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -155,9 +157,9 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
-# Chnge Workspace
-bindsym $mod+Control+Left workspace prev
-bindsym $mod+Control+Right workspace next
+# Change Workspace
+bindsym $mod+ctrl+Left workspace prev
+bindsym $mod+ctrl+Right workspace next
 
 # move focused container to workspace
 bindsym Ctrl+$mod+1 move container to workspace 1
