@@ -11,3 +11,6 @@ breeze-gtk
 
 # Set the the locale for X11
 libxkbcommon-x11
+
+# To enable numlock on start
+numlockx
