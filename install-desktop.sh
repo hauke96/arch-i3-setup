@@ -48,8 +48,6 @@ function setup_printer()
 function install_i3()
 {
 	pacman_install "x"
-	sudo localectl --no-convert set-x11-keymap de
-
 	aur_install "i3"
 }
 

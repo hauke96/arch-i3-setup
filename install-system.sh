@@ -45,6 +45,9 @@ function setup_locale()
 	echo 'LC_DATE="'"$LOC"'"' >> /etc/locale.conf
 	echo 'LC_NUMERIC="'"$LOC"'"' >> /etc/locale.conf
 	echo 'LC_COLLATE=C' >> /etc/locale.conf
+
+	# To not type dead keys (like ^ ´ `) twice
+	localectl set-x11-keymap de "pc105" nodeadkeys
 }
 
 # Setup pacman
