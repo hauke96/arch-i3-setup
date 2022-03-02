@@ -4,6 +4,9 @@ SSH_AUTH_SOCK DEFAULT="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 # Java font anti-aliasing with newer fontconfig version
 _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 
+# Needed to work properly with XDG
+export KDE_SESSION_VERSION=5
+
 # For ImageMagick's problems with Nvidia+OpenCL
 #export MAGICK_OCL_DEVICE=OFF
 
