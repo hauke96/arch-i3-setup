@@ -2,7 +2,8 @@
 
 if [ "$@" ]
 then
-	xdg-open $1
+	FILE=$(echo "$1" | sed -E "s/(.*)  \[(.*)\]/\2\1/")
+	coproc ( "xdg-open" "$FILE" >/dev/null 2>&1 )
 	exit 0
 fi
 
