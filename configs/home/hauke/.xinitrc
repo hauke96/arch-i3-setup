@@ -18,4 +18,6 @@ exec kwalletd5 &
 # Start akonadi
 exec akonadictl start &
 
-exec i3
+exec nitrogen --restore >> ~/.nitrogen.log &
+
+exec i3 -V -d all >> ~/.i3.log
