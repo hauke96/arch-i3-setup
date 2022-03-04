@@ -18,6 +18,9 @@ gaps inner 8
 gaps outer 0
 gaps top 41
 
+# Disable mouse-warping (moving mouse to new window when e.g. a link was clicked)
+mouse_warping none
+
 # Border
 
 # Only works with i3-gaps-rounded:
