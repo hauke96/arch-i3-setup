@@ -6,21 +6,21 @@ filezilla
 firefox
 firewalld
 kdeconnect
+# Needed for xdg-open which needs kfmclient which is part of konqueror:
+konqueror
 network-manager-applet
 networkmanager-pptp
 nmap
 openssh
-sshpass
 rsync
-# Needed for xdg-open which needs kfmclient which is part of konqueror:
-konqueror
+sshpass
 
 # Communication
 bogofilter
+kdepim-addons
 kmail
 kontact
 korganizer
-kdepim-addons
 signal-desktop
 telegram-desktop
 
@@ -30,18 +30,19 @@ qgis
 
 # Multimedia
 gimp
-kcolorchooser
 gwenview
 imagemagick
+kcolorchooser
 pavucontrol
 pulseaudio
+vlc
 
 # Documents
 kate
+libreoffice-still-de
 okular
 skanlite
 xournalpp
-libreoffice-still-de
 
 # Misc
 baobab
