@@ -11,7 +11,8 @@
 
 # Win = Mod4
 # Alt = Mod1
-set $mod Mod1
+set $mod Mod4
+set $alt Mod1
 
 # Gaps
 gaps inner 8
@@ -168,20 +169,20 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # Change Workspace
-bindsym $mod+ctrl+Left workspace prev
-bindsym $mod+ctrl+Right workspace next
+bindsym $alt+ctrl+Left workspace prev
+bindsym $alt+ctrl+Right workspace next
 
 # move focused container to workspace
-bindsym Ctrl+$mod+1 move container to workspace 1
-bindsym Ctrl+$mod+2 move container to workspace 2
-bindsym Ctrl+$mod+3 move container to workspace 3
-bindsym Ctrl+$mod+4 move container to workspace 4
-bindsym Ctrl+$mod+5 move container to workspace 5
-bindsym Ctrl+$mod+6 move container to workspace 6
-bindsym Ctrl+$mod+7 move container to workspace 7
-bindsym Ctrl+$mod+8 move container to workspace 8
-bindsym Ctrl+$mod+9 move container to workspace 9
-bindsym Ctrl+$mod+0 move container to workspace 10
+bindsym Ctrl+$alt+1 move container to workspace 1
+bindsym Ctrl+$alt+2 move container to workspace 2
+bindsym Ctrl+$alt+3 move container to workspace 3
+bindsym Ctrl+$alt+4 move container to workspace 4
+bindsym Ctrl+$alt+5 move container to workspace 5
+bindsym Ctrl+$alt+6 move container to workspace 6
+bindsym Ctrl+$alt+7 move container to workspace 7
+bindsym Ctrl+$alt+8 move container to workspace 8
+bindsym Ctrl+$alt+9 move container to workspace 9
+bindsym Ctrl+$alt+0 move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
