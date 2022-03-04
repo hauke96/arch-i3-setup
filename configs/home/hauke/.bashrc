@@ -44,7 +44,7 @@ alias stm='ssh -p 17642 stm@stm.hauke-stieler.de'
 
 alias ls='ls --color=auto'
 alias ll='ls -alh --color=always'
-alias grep='grep --color=always'
+#alias grep='grep --color=always'
 alias df='df -hBG'
 alias diff='git diff --no-index'
 
