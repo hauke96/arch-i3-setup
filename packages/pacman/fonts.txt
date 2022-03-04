@@ -2,3 +2,8 @@ ttf-dejavu
 ttf-droid
 ttf-hack
 ttf-liberation
+
+# For emojis, asian characters, etc.
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
