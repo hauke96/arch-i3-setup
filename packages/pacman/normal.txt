@@ -32,6 +32,7 @@ qgis
 gimp
 gwenview
 imagemagick
+inkscape
 kcolorchooser
 pavucontrol
 pulseaudio
