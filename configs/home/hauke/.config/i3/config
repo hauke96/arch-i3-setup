@@ -183,8 +183,10 @@ bindsym $mod+9 focus output $monitor_right; workspace 10; focus output $monitor_
 bindsym $mod+0 focus output $monitor_left; workspace 9; focus output $monitor_right; workspace 10
 
 # Change Workspace
-bindsym $alt+ctrl+Left focus output $monitor_left; workspace prev; workspace prev;
-bindsym $alt+ctrl+Right focus output $monitor_right; workspace next; workspace next; focus output $monitor_left;
+#bindsym $alt+ctrl+Left focus output $monitor_left; workspace prev; workspace prev;
+#bindsym $alt+ctrl+Right focus output $monitor_right; workspace next; workspace next; focus output $monitor_left;
+bindsym $alt+ctrl+Left exec --no-startup-id "python ~/.config/i3/i3-helper.py --workspace prev"
+bindsym $alt+ctrl+Right exec --no-startup-id "python ~/.config/i3/i3-helper.py --workspace next"
 
 # move focused container to workspace
 bindsym Ctrl+$alt+1 move container to workspace $ws_messaging
