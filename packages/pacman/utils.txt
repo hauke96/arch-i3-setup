@@ -5,11 +5,16 @@ konsole
 man-db
 
 # Misc
+ark
 gzip
+jq
 p7zip
 unzip
-ark
 which
 
 # Printing
 cups-pdf
+
+# To make i3-save-tree work
+perl-anyevent-i3
+perl-json-xs
