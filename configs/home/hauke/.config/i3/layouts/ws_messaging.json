@@ -1,0 +1,44 @@
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1021,
+       "width": 800,
+       "x": 2405,
+       "y": 50
+    },
+    "marks": [],
+    "name": "Signal",
+    "percent": 0.5,
+    "swallows": [
+       {
+         "class": "^Signal$",
+         "instance": "^signal$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1021,
+       "width": 946,
+       "x": 1929,
+       "y": 50
+    },
+    "marks": [],
+    "name": "Telegram",
+    "percent": 0.5,
+    "swallows": [
+       {
+         "class": "^TelegramDesktop$",
+         "instance": "^telegram\\-desktop$"
+       }
+    ],
+    "type": "con"
+}
+

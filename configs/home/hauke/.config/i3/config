@@ -83,12 +83,6 @@ bindsym $mod+l exec $LockScreen
 bindsym $mod+s exec $LockScreen && systemctl suspend
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-#exec --no-startup-id nm-applet
-#exec --no-startup-id polybar -r -c ~/.config/polybar/config bar
-exec --no-startup-id ~/.config/polybar/launch.sh
-exec --no-startup-id picom
-#exec --no-startup-id nitrogen --restore
-
 # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status killall -SIGUSR1 i3status
 
@@ -156,27 +150,47 @@ bindsym $mod+a focus parent
 #bindsym --release $mod+x exec --no-startup-id import /home/hauke/Bilder/latest-screenshot.png
 bindsym Print exec --no-startup-id "spectacle -g"
 
+# define monitors
+set $monitor_left "HDMI-A-0"
+set $monitor_right "DVI-D-0"
+
+# define workspaces
+set $ws_messaging 1:IM
+set $ws_spotify   2:S
+set $ws_browser   3:B
+set $ws_mail      4:M
+
+# map workspaces to monitors
+workspace $ws_messaging output $monitor_left
+workspace $ws_spotify output $monitor_right
+workspace $ws_browser output $monitor_left
+workspace $ws_mail output $monitor_right
+
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace $ws_spotify; workspace $ws_messaging
+bindsym $mod+2 workspace $ws_messaging; workspace $ws_spotify
+
+bindsym $mod+3 workspace $ws_mail; workspace $ws_browser
+bindsym $mod+4 workspace $ws_browser; workspace $ws_mail
+
+bindsym $mod+5 focus output $monitor_right; workspace 6; focus output $monitor_left; workspace 5
+bindsym $mod+6 focus output $monitor_left; workspace 5; focus output $monitor_right; workspace 6
+
+bindsym $mod+7 focus output $monitor_right; workspace 8; focus output $monitor_left; workspace 7
+bindsym $mod+8 focus output $monitor_left; workspace 7; focus output $monitor_right; workspace 8
+
+bindsym $mod+9 focus output $monitor_right; workspace 10; focus output $monitor_left; workspace 9
+bindsym $mod+0 focus output $monitor_left; workspace 9; focus output $monitor_right; workspace 10
 
 # Change Workspace
-bindsym $alt+ctrl+Left workspace prev
-bindsym $alt+ctrl+Right workspace next
+bindsym $alt+ctrl+Left focus output $monitor_left; workspace prev; workspace prev;
+bindsym $alt+ctrl+Right focus output $monitor_right; workspace next; workspace next; focus output $monitor_left;
 
 # move focused container to workspace
-bindsym Ctrl+$alt+1 move container to workspace 1
-bindsym Ctrl+$alt+2 move container to workspace 2
-bindsym Ctrl+$alt+3 move container to workspace 3
-bindsym Ctrl+$alt+4 move container to workspace 4
+bindsym Ctrl+$alt+1 move container to workspace $ws_messaging
+bindsym Ctrl+$alt+2 move container to workspace $ws_spotify 
+bindsym Ctrl+$alt+3 move container to workspace $ws_browser
+bindsym Ctrl+$alt+4 move container to workspace $ws_mail
 bindsym Ctrl+$alt+5 move container to workspace 5
 bindsym Ctrl+$alt+6 move container to workspace 6
 bindsym Ctrl+$alt+7 move container to workspace 7
@@ -217,3 +231,19 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+# autostart applications
+#exec --no-startup-id nm-applet
+exec --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id picom
+
+exec --no-startup-id "i3-msg 'workspace $ws_messaging; append_layout ~/.config/i3/layouts/ws_messaging.json'"
+exec --no-startup-id "i3-msg 'workspace $ws_spotify; append_layout ~/.config/i3/layouts/ws_spotify.json'"
+exec --no-startup-id "i3-msg 'workspace $ws_browser; append_layout ~/.config/i3/layouts/ws_browser.json'"
+exec --no-startup-id "i3-msg 'workspace $ws_mail; append_layout ~/.config/i3/layouts/ws_mail.json'"
+
+exec --no-startup-id telegram-desktop
+exec --no-startup-id signal-desktop
+exec --no-startup-id spotify
+exec --no-startup-id firefox
+exec --no-startup-id kontact
