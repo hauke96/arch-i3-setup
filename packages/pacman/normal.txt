@@ -19,6 +19,7 @@ sshpass
 bogofilter
 kdepim-addons
 kmail
+kleopatra
 kontact
 korganizer
 signal-desktop
