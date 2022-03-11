@@ -14,5 +14,7 @@ docker-compose
 
 # Misc
 dbeaver
+git
 hugo
+make
 pandoc

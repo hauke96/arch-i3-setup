@@ -8,6 +8,7 @@ man-db
 ark
 gzip
 jq
+lsof
 p7zip
 unzip
 which

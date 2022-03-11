@@ -2,11 +2,12 @@
 
 # Internet
 akregator
+dhcpcd
 filezilla
 firefox
 firewalld
 kdeconnect
-# Needed for xdg-open which needs kfmclient which is part of konqueror:
+# konqueror is needed for xdg-open which needs kfmclient which is part of konqueror:
 konqueror
 network-manager-applet
 networkmanager-pptp
@@ -30,6 +31,7 @@ josm
 qgis
 
 # Multimedia
+calibre
 gimp
 gwenview
 imagemagick
@@ -51,6 +53,7 @@ baobab
 bitcoin-qt
 dolphin
 dolphin-plugins
+# kde-cli-tools are needed for e.g. xdg-open support
 kde-cli-tools
 keepassxc
 
