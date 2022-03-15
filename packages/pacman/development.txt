@@ -8,6 +8,10 @@ jdk8-openjdk
 # Go
 go
 
+# TypeScript
+nodejs
+npm
+
 # Docker
 docker
 docker-compose
@@ -15,6 +19,7 @@ docker-compose
 # Misc
 dbeaver
 git
+gitg
 hugo
 make
 pandoc

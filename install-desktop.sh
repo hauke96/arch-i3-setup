@@ -101,3 +101,7 @@ sudo archlinux-java set java-11-openjdk
 
 # 7.2 Start CUPS after configs have been copied
 sudo systemctl start cups-browsed.service
+
+# 7.3 Add user to docker group to start container
+sudo systemctl enable docker.service
+sudo usermod -aG docker $TARGET_USER
