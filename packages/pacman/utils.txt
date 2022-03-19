@@ -19,3 +19,8 @@ cups-pdf
 # To make i3-save-tree work
 perl-anyevent-i3
 perl-json-xs
+
+# To play DVDs
+libdvdcss
+libdvdnav
+libdvdread
