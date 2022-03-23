@@ -105,6 +105,3 @@ sudo systemctl start cups-browsed.service
 # 7.3 Add user to docker group to start container
 sudo systemctl enable docker.service
 sudo usermod -aG docker $TARGET_USER
-
-# 7.4 Activate systemd-home to not spam journal and slightly speed-up hibernation
-sudo systemctl enable systemd-homed
