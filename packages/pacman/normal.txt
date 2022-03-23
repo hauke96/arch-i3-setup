@@ -34,6 +34,7 @@ qgis
 calibre
 gimp
 gwenview
+handbrake
 imagemagick
 inkscape
 kcolorchooser
@@ -51,11 +52,14 @@ xournalpp
 # Misc
 baobab
 bitcoin-qt
+borg
 dolphin
 dolphin-plugins
+gnome-calculator
 # kde-cli-tools are needed for e.g. xdg-open support
 kde-cli-tools
 keepassxc
 
-## Screenshots
+# Screenshots
 spectacle
+
