@@ -1,5 +1,12 @@
+MenuBar=Disabled
+
 [CompactMode]
 FontWeight=50
+
+[ContextMenu]
+ShowCopyLocation=false
+ShowSortBy=false
+ShowViewMode=false
 
 [Desktop Entry]
 DefaultProfile=Hauke.profile
@@ -28,14 +35,17 @@ FontWeight=50
 previewsShown=false
 
 [KPropertiesDialog]
+DVI-D-0 HDMI-A-0 Height 1920x1080=359
+DVI-D-0 HDMI-A-0 Width 1920x1080=385
 HDMI-A-0 DVI-D-0 Height 1080=520
-HDMI-A-0 DVI-D-0 Height 1920x1080=588
+HDMI-A-0 DVI-D-0 Height 1920x1080=409
 HDMI-A-0 DVI-D-0 Width 1920=635
-HDMI-A-0 DVI-D-0 Width 1920x1080=635
+HDMI-A-0 DVI-D-0 Width 1920x1080=381
 Height 1080=518
 Width 1920=635
 
 [MainWindow]
+DVI-D-0 HDMI-A-0 Window-Maximized 1920x1080=true
 DVI-D-0 Window-Maximized 1920x1080=true
 HDMI-A-0 DVI-D-0 Height 1080=1015
 HDMI-A-0 DVI-D-0 Height 1920x1080=667

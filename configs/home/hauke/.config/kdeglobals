@@ -1,3 +1,6 @@
+[$Version]
+update_info=filepicker.upd:filepicker-remove-old-previews-entry
+
 [ColorEffects:Disabled]
 Color=56,56,56
 ColorAmount=0
@@ -131,12 +134,20 @@ ForegroundPositive=22,170,71
 ForegroundVisited=137,70,170
 
 [General]
+BrowserApplication=firefox.desktop
 ColorScheme=Hauke
 Name=Hauke
 shadeSortColumn=true
 
 [KDE]
+ShowDeleteCommand=true
 contrast=4
+
+[KShortcutsDialog Settings]
+Dialog Size=635,480
+
+[PreviewSettings]
+MaximumRemoteSize=0
 
 [WM]
 activeBackground=48,48,48
@@ -145,4 +156,3 @@ activeForeground=221,221,221
 inactiveBackground=48,48,48
 inactiveBlend=151,151,151
 inactiveForeground=151,151,151
-
