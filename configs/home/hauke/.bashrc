@@ -40,11 +40,15 @@ export GPG_TTY=$(tty)
 
 # For simple-task-manager project
 alias stm-t='ssh -p 28251 root@stm-test.hauke-stieler.de'
+alias antares='ssh -p 28251 root@stm-test.hauke-stieler.de'
 alias stm='ssh -p 17642 stm@stm.hauke-stieler.de'
+alias beteigeuze='ssh -p 17642 stm@stm.hauke-stieler.de'
+
+alias castor='ssh hauke@192.168.178.34'
 
 alias ls='ls --color=auto'
 alias ll='ls -alh --color=always'
-#alias grep='grep --color=always'
+alias grep='grep --color=auto'
 alias df='df -hBG'
 alias diff='git diff --no-index'
 
@@ -52,7 +56,7 @@ alias http='python3 -m http.server'
 
 # Update and shutdown
 #alias upd='sudo bash -c "pacman -Syu && shutdown -h now"'
-alias upd='mkdir .shutdown && $HOME/shutdown.sh 2>&1 | tee -a $HOME/.shutdown/$(date +"%Y%m%d_%H%M%S").log'
+alias upd='mkdir .shutdown || true && $HOME/shutdown.sh 2>&1 | tee -a $HOME/.shutdown/$(date +"%Y%m%d_%H%M%S").log'
 
 
 #PS1='[\u@\h \W]\$ '

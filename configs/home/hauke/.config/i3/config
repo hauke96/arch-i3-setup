@@ -189,10 +189,10 @@ bindsym $alt+ctrl+Left exec --no-startup-id "python ~/.config/i3/i3-helper.py --
 bindsym $alt+ctrl+Right exec --no-startup-id "python ~/.config/i3/i3-helper.py --workspace next"
 
 # move focused container to workspace
-bindsym Ctrl+$alt+1 move container to workspace $ws_messaging
-bindsym Ctrl+$alt+2 move container to workspace $ws_spotify 
-bindsym Ctrl+$alt+3 move container to workspace $ws_browser
-bindsym Ctrl+$alt+4 move container to workspace $ws_mail
+bindsym Ctrl+$alt+1 move container to workspace "$ws_messaging"
+bindsym Ctrl+$alt+2 move container to workspace "$ws_spotify"
+bindsym Ctrl+$alt+3 move container to workspace "$ws_browser"
+bindsym Ctrl+$alt+4 move container to workspace "$ws_mail"
 bindsym Ctrl+$alt+5 move container to workspace 5
 bindsym Ctrl+$alt+6 move container to workspace 6
 bindsym Ctrl+$alt+7 move container to workspace 7
@@ -233,6 +233,9 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+# Start these windows as floating windows:
+for_window [class="Gnome-calculator"] floating enable
 
 # autostart applications
 #exec --no-startup-id nm-applet
