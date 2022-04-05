@@ -51,17 +51,6 @@ function install_i3()
 	aur_install "i3"
 }
 
-# Copy all the config files
-function install_configs()
-{
-	cd configs
-	sudo cp -r --parents ./* /
-	sudo chown $TARGET_USER:$TARGET_USER -R /home/$TARGET_USER
-	cd ..
-
-	echo "Installed configs"
-}
-
 # 1. Setup AUR
 setup_aur
 
@@ -89,7 +78,7 @@ setup_printer
 # 6. Copy all configs
 
 # 6.1 Copy all files and overwrite existing ones
-install_configs
+sudo ./install-configs.sh
 
 # 6.2 Copy fstab without overriding existing configs
 cat ./fstab >> /etc/fstab
