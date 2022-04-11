@@ -235,7 +235,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Start these windows as floating windows:
+for_window [class="gnome-calculator"] floating enable
 for_window [class="Gnome-calculator"] floating enable
+
 
 # autostart applications
 #exec --no-startup-id nm-applet

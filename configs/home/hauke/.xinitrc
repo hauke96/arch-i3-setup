@@ -2,6 +2,7 @@
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_STYLE_OVERRIDE="kvantum"
 export XDG_CURRENT_DESKTOP=KDE
+export GTK_THEME=Breeze-Dark
 
 # Set DISPLAY variable in systemd. Needed for e.g. dunst.
 systemctl --user import-environment DISPLAY
