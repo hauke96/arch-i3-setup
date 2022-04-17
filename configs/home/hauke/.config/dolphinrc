@@ -38,9 +38,9 @@ previewsShown=false
 DVI-D-0 HDMI-A-0 Height 1920x1080=359
 DVI-D-0 HDMI-A-0 Width 1920x1080=385
 HDMI-A-0 DVI-D-0 Height 1080=520
-HDMI-A-0 DVI-D-0 Height 1920x1080=409
+HDMI-A-0 DVI-D-0 Height 1920x1080=384
 HDMI-A-0 DVI-D-0 Width 1920=635
-HDMI-A-0 DVI-D-0 Width 1920x1080=381
+HDMI-A-0 DVI-D-0 Width 1920x1080=398
 Height 1080=518
 Width 1920=635
 
@@ -79,7 +79,7 @@ ConfirmTrash=true
 
 [Open-with settings]
 CompletionMode=1
-History=calc,dbea,vlc,qgis,josm,fire,draw,digi,darkt,digik,digika,Digikam,kate,thund,viking
+History=josm,qgis,calc,dbea,vlc,fire,draw,digi,darkt,digik,digika,Digikam,kate,thund,viking
 
 [PreviewSettings]
 Plugins=
