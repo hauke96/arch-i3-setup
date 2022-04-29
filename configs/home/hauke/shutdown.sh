@@ -13,6 +13,7 @@ killall telegram-desktop
 killall signal-desktop
 killall goland
 killall webstorm
+killall spotify
 
 # Update packages
 sudo pacman -Syu
