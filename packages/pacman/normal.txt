@@ -47,6 +47,9 @@ kate
 libreoffice-still-de
 okular
 skanlite
+texlive-lang
+texlive-most
+texstudio
 xournalpp
 
 # Misc

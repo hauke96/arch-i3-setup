@@ -12,6 +12,7 @@ lsof
 p7zip
 unzip
 which
+zip
 
 # Printing
 cups-pdf
