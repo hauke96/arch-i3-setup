@@ -34,11 +34,15 @@ FontWeight=50
 [InformationPanel]
 previewsShown=false
 
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
 [KPropertiesDialog]
 DVI-D-0 HDMI-A-0 Height 1920x1080=542
 DVI-D-0 HDMI-A-0 Width 1920x1080=619
 HDMI-A-0 DVI-D-0 Height 1080=520
-HDMI-A-0 DVI-D-0 Height 1920x1080=392
+HDMI-A-0 DVI-D-0 Height 1920x1080=517
 HDMI-A-0 DVI-D-0 Width 1920=635
 HDMI-A-0 DVI-D-0 Width 1920x1080=619
 Height 1080=518
