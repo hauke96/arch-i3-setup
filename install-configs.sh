@@ -29,6 +29,13 @@ do
 
 	echo "Create symlink $TARGET -> $SRC"
 	sudo ln -s "$SRC" "$TARGET"
+
+	# Set owner on files of user
+	if [[ "$TARGET" == "/home/$TARGET_USER"* ]]
+	then
+		echo "Set ownership of $TARGET to $TARGET_USER"
+		sudo chown -h $TARGET_USER:$TARGET_USER "$TARGET"
+	fi
 done
 IFS="$OIFS"
 

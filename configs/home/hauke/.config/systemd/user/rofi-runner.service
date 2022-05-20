@@ -1,0 +1,9 @@
+[Unit]
+Description=Runner to build the rofi file list.
+
+[Service]
+Type=simple
+ExecStart=/home/hauke/.config/rofi/runner.sh
+
+[Install]
+WantedBy=default.target

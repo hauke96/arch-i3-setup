@@ -1,7 +1,6 @@
 #!/bin/bash
 
 CACHE="$HOME/.cache/rofi.filecache"
-mkdir -p "$CACHE"
 
 # Find all files:
 # - in max. 5 folder depth
@@ -14,5 +13,5 @@ find \
 	-type f \
 	| grep -v "\./\.[^/]*/" \
 	| grep -v "\.git/\|/node_modules/" \
-	| sed -E "s/^(.*\/)?(.*)$/\2  [\1]/g"
+	| sed -E "s/^(.*\/)?(.*)$/\2  [\1]/g" \
 	> "$CACHE"

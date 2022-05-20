@@ -80,6 +80,10 @@ setup_printer
 # 6.1 Copy all files and overwrite existing ones
 sudo ./install-configs.sh
 
+systemctl --user enable rofi-runner.service
+systemctl --user enable rofi-runner.timer
+systemctl --user start rofi-runner.timer
+
 # 6.2 Copy fstab without overriding existing configs
 cat ./fstab >> /etc/fstab
 

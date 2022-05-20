@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer for the rofi runner job.
+
+[Timer]
+OnUnitActiveSec=5m
+OnBootSec=5m
+
+[Install]
+WantedBy=timers.target

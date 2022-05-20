@@ -9,9 +9,9 @@ then
 	exit 0
 fi
 
-if [ ! -f "$CACHE" ]
+if [ ! -f $CACHE ]
 then
-	./runner.sh
+	$HOME/.config/rofi/runner.sh
 fi
 
 cat "$CACHE"
