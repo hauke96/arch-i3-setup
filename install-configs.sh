@@ -42,3 +42,5 @@ IFS="$OIFS"
 cd ..
 
 echo "Installed configs"
+echo
+echo "NOTICE: If you executed this script manually, you may have to enable systemd services."
