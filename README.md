@@ -57,9 +57,10 @@ This repo contains some scripts:
 | `find-changed-configs.sh` | Determines all config files that differ from the ones in `./configs/`. Use `--name-only` to just print the file names. |
 | `packages-diff.sh` | Show a diff view of all installed packages and all packages registered in this repo under `./packages/`. |
 | `install.sh` | Used to start the whole installation process |
-| `install-util.sh` | Not a standalone script. Contains important functions and variables. |
 | `install-system.sh` | Used internally to set up the system with pacman, AUR, locale, etc. |
 | `install-desktop.sh` | Used internally to install all the desktop enviroment things (i3, fonts, browser, IDEs, ...) |
+| `install-configs.sh` | Used to (re)install all the config files. They are not copied but symlinks are used. |
+| `install-util.sh` | Not a standalone script. Contains important functions and variables. |
 
 Only use the first three scripts, all others (`install-...`) are internal scripts.
 
