@@ -1,7 +1,9 @@
-if [ $1 = "r" ]
+#!/bin/bash
+
+if [ "$1" == "r" ]
 then
 	xsetwacom --set "Wacom Intuos S Pen stylus" Area -15200 0 15200 9500
-elif [ $1 = "l" ]
+elif [ "$1" == "l" ]
 then
 	xsetwacom --set "Wacom Intuos S Pen stylus" Area 0 0 30400 9500
 else
