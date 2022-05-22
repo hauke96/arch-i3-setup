@@ -241,7 +241,7 @@ for_window [class="Gnome-calculator"] floating enable
 
 # autostart applications
 #exec --no-startup-id nm-applet
-exec --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id ~/.config/polybar/launch.sh >> ~/.polybar.log
 exec --no-startup-id picom
 
 exec --no-startup-id "i3-msg 'workspace $ws_messaging; append_layout ~/.config/i3/layouts/ws_messaging.json'"
