@@ -56,7 +56,7 @@ alias http='python3 -m http.server'
 
 # Update and shutdown
 #alias upd='sudo bash -c "pacman -Syu && shutdown -h now"'
-alias upd='mkdir .shutdown || true && $HOME/shutdown.sh 2>&1 | tee -a $HOME/.shutdown/$(date +"%Y%m%d_%H%M%S").log'
+alias upd='mkdir .shutdown || true && sudo $HOME/shutdown.sh 2>&1 | tee -a $HOME/.shutdown/$(date +"%Y%m%d_%H%M%S").log'
 
 
 #PS1='[\u@\h \W]\$ '
