@@ -69,22 +69,26 @@ function setup_pacman()
 
 
 
-# 1. Add user and add to sudoers
+# 1. Setup NTP
+sudo systemctl enable ntpdate.service
+sudo systemctl start ntpdate.service
+
+# 2. Add user and add to sudoers
 echo "Create user"
 create_user
 echo "User creation done"
 
-# 2. Adjust locale
+# 3. Adjust locale
 echo "Set up locale"
 setup_locale
 echo "Locale setup done"
 
-# 3. Init pacman
+# 4. Init pacman
 echo "Set up pacman"
 setup_pacman
 echo "Pacman setup done"
 
-# 4. Copy stuff to new users home
+# 5. Copy stuff to new users home
 echo "Copy configs into target users home folder"
 mkdir /home/$TARGET_USER/setup
 cp -r ./* /home/$TARGET_USER/setup/

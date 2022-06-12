@@ -9,6 +9,7 @@ ark
 gzip
 jq
 lsof
+ntp
 p7zip
 unzip
 which
