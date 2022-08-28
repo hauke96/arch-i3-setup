@@ -1,7 +1,7 @@
 MenuBar=Disabled
 
-[CompactMode]
-FontWeight=50
+[$Version]
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
 
 [ContextMenu]
 ShowCopyLocation=false
@@ -12,7 +12,6 @@ ShowViewMode=false
 DefaultProfile=Hauke.profile
 
 [DetailsMode]
-FontWeight=50
 PreviewSize=16
 UseShortRelativeDates=false
 
@@ -28,9 +27,6 @@ SplitView=true
 Version=201
 ViewPropsTimestamp=2018,8,26,2,58,18
 
-[IconsMode]
-FontWeight=50
-
 [InformationPanel]
 previewsShown=false
 
@@ -42,9 +38,9 @@ Places Icons Static Size=22
 DVI-D-0 HDMI-A-0 Height 1920x1080=542
 DVI-D-0 HDMI-A-0 Width 1920x1080=619
 HDMI-A-0 DVI-D-0 Height 1080=520
-HDMI-A-0 DVI-D-0 Height 1920x1080=517
+HDMI-A-0 DVI-D-0 Height 1920x1080=409
 HDMI-A-0 DVI-D-0 Width 1920=635
-HDMI-A-0 DVI-D-0 Width 1920x1080=619
+HDMI-A-0 DVI-D-0 Width 1920x1080=408
 Height 1080=518
 Width 1920=635
 
@@ -83,7 +79,7 @@ ConfirmTrash=true
 
 [Open-with settings]
 CompletionMode=1
-History=josm,qgis,calc,dbea,vlc,fire,draw,digi,darkt,digik,digika,Digikam,kate,thund,viking
+History=calc,qgis,josm,dbea,vlc,fire,draw,digi,darkt,digik,digika,Digikam,kate,thund,viking
 
 [PreviewSettings]
 Plugins=

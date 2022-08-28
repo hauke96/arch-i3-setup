@@ -8,6 +8,9 @@ State=AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAfsAAAAcAFMAUwBIAE0AYQBuAGEAZwBlAH
 [Desktop Entry]
 DefaultProfile=Hauke.profile
 
+[General]
+ConfigVersion=1
+
 [KonsoleWindow]
 ShowMenuBarByDefault=false
 
@@ -16,7 +19,7 @@ ShowMenuBarByDefault=false
 :0.0 Width 1920x1080=3822
 DVI-D-0 HDMI-A-0 Height 1920x1080=1021
 DVI-D-0 HDMI-A-0 Width 1920x1080=1902
-DVI-D-0 HDMI-A-0 XPosition 1920x1080=2885
+DVI-D-0 HDMI-A-0 XPosition 1920x1080=9
 DVI-D-0 HDMI-A-0 YPosition 1920x1080=50
 HDMI-A-0 DVI-D-0 Height 1920x1080=1004
 HDMI-A-0 DVI-D-0 Width 1920x1080=1902
