@@ -4,7 +4,7 @@
 
 # In /etc/environment eintragen:
 # Java font anti-aliasing with newer fontconfig version
-# export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -28,15 +28,15 @@ fi
 # Per shell: Reference to GPG pinentry tty
 export GPG_TTY=$(tty)
 
-# TODO Use Steam's Proton as wine
-#export W="/home/hauke/.steam/steam/steamapps/common/Proton 3.16/dist"
-#export WINEVERPATH=$W
-##export PATH=$W/bin:$PATH
-#export WINESERVER=$W/bin/wineserver
-#export WINELOADER=$W/bin/wine
-#export WINEDLLPATH=$W/lib/wine/fakedlls
-#export LD_LIBRARY_PATH="$W/lib:$LD_LIBRARY_PATH"
-#export WINEPREFIX=~/.steam/steam/steamapps/compatdata/243360/pfx
+export W="/home/hauke/.steam/steam/steamapps/common/Proton\ 7\.0/dist"
+export WINEVERPATH="$W"
+#export PATH=$W/bin:$PATH
+export WINESERVER="$W/bin/wineserver"
+export WINELOADER="$W/bin/wine"
+export WINEDLLPATH="$W/lib/wine/fakedlls"
+export LD_LIBRARY_PATH="$W/lib:$LD_LIBRARY_PATH"
+export WINEPREFIX=~/.steam/steam/steamapps/compatdata/1887720/pfx
+alias wine="$W/bin/wine"
 
 # For simple-task-manager project
 alias stm-t='ssh -p 28251 root@stm-test.hauke-stieler.de'
