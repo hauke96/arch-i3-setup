@@ -14,7 +14,7 @@ systemctl --user import-environment DISPLAY
 numlockx &
 
 # For globale kde binding. Needed by e.g. spectacle
-exec kglobalaccel5 &
+#exec kglobalaccel5 &
 
 # Start KWalletd
 exec kwalletd5 &
