@@ -13,5 +13,6 @@ find \
 	-type f \
 	| grep -v "\./\.[^/]*/" \
 	| grep -v "\.git/\|/node_modules/" \
+	| grep -Pv "\.(toc|snm|nav|out|aux|synctex.gz)$" \
 	| sed -E "s/^(.*\/)?(.*)$/\2  [\1]/g" \
 	> "$CACHE"
