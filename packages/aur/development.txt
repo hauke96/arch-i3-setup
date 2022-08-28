@@ -1,4 +1,5 @@
 # Additional development applications
+abricotine
 
 # Android
 android-studio
