@@ -7,7 +7,7 @@ import sys
 
 
 monitors = {
-	"left": "HDMI-A-0",
+	"left": "DisplayPort-1",
 	"right": "DVI-D-0"
 }
 
