@@ -1,2 +1,0 @@
-# Path to SSH Agents socket file
-SSH_AUTH_SOCK DEFAULT="${XDG_RUNTIME_DIR}/ssh-agent.socket"

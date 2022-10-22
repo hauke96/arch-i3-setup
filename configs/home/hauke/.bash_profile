@@ -2,6 +2,9 @@
 # ~/.bash_profile
 #
 
+# Path to SSH Agents socket file
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # Java font anti-aliasing with newer fontconfig version
