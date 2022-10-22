@@ -151,7 +151,7 @@ bindsym $mod+a focus parent
 bindsym Print exec --no-startup-id "spectacle -g"
 
 # define monitors
-set $monitor_left "HDMI-A-0"
+set $monitor_left "DisplayPort-1"
 set $monitor_right "DVI-D-0"
 
 # define workspaces
