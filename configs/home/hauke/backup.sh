@@ -23,6 +23,7 @@ trap 'echo Backup $NOW interrupted >&2; exit 2' INT TERM
 
 
 # Create new backup
+HOME_HAUKE="/home/hauke"
 info "Creating backup $BORG_REPO::$NOW"
 borg create                         \
 	--verbose                       \
@@ -32,9 +33,16 @@ borg create                         \
 	--show-rc                       \
 	--compression lz4               \
 	--exclude-caches                \
-	--exclude '/home/*/.cache/*'    \
 	--exclude '/var/tmp/*'          \
 	--exclude '/var/cache/*'        \
+	--exclude '/home/*/.cache/*'    \
+	--exclude '/home/*/Downloads'   \
+	--exclude '/home/*/.npm'        \
+	--exclude '/home/*/.nuget'      \
+	--exclude '/home/*/dotTraceSnapshots' \
+	--exclude '$HOME_HAUKE/Projekte/C#/MARS' \
+	--exclude '$HOME_HAUKE/Videos'  \
+	--exclude '$HOME_HAUKE/.i3.log*'\
 	                                \
 	::"$NOW"                        \
 	$FOLDER                         
