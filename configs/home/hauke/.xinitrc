@@ -25,4 +25,5 @@ exec akonadictl start &
 exec nitrogen --restore >> ~/.nitrogen.log &
 
 #exec if [ -f ~/.i3.log ]; then mv ~/.i3.log ~/.i3.log.old; fi
-exec i3 -V -d all > ~/.i3.log
+#exec i3 -V -d all > ~/.i3.log
+exec i3 -V > ~/.i3.log
