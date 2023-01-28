@@ -1,0 +1,21 @@
+# /dev/sda2
+UUID=f2dc28dd-bdfa-4bd6-9b8f-d05ea6d25ee0	/         	ext4      	rw,relatime	0 1
+
+# tracefs
+tracefs             	/sys/kernel/tracing	tracefs   	rw,nosuid,nodev,noexec	0 0
+
+# /dev/sda1
+UUID=5C34-4954      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/sde1
+UUID=7317f7ad-9de7-4b3e-aeaf-eb5b94476166	/home/hauke	ext4      	rw,relatime	0 2
+
+# /dev/sdc1
+UUID=d4b76e5d-581c-4bd1-a2d2-4c0809205a3e	/media/backup-home	ext4      	rw,relatime	0 2
+
+# /dev/sdb1
+UUID=1cf8867d-0199-4c8b-94c1-bd29c277783f	/media/data	ext4      	rw,relatime	0 2
+
+# /dev/sdd1
+UUID=65dc26a4-a894-4095-9149-502261ffd5b1	/media/backup-data	ext4      	rw,relatime	0 2
+
