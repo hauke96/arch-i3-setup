@@ -24,7 +24,7 @@ GlobalViewProps=true
 HomeUrl=/home/hauke/
 RememberOpenedTabs=false
 SplitView=true
-Version=201
+Version=202
 ViewPropsTimestamp=2018,8,26,2,58,18
 
 [InformationPanel]
@@ -37,10 +37,16 @@ Places Icons Static Size=22
 [KPropertiesDialog]
 DVI-D-0 HDMI-A-0 Height 1920x1080=542
 DVI-D-0 HDMI-A-0 Width 1920x1080=619
+DisplayPort-1 DVI-D-0 Height 1920x1080=542
+DisplayPort-1 DVI-D-0 Height 1920x1080 DVI-D-0=554
+DisplayPort-1 DVI-D-0 Height 1920x1080 DisplayPort-1=357
+DisplayPort-1 DVI-D-0 Width 1920x1080=619
+DisplayPort-1 DVI-D-0 Width 1920x1080 DVI-D-0=619
+DisplayPort-1 DVI-D-0 Width 1920x1080 DisplayPort-1=338
 HDMI-A-0 DVI-D-0 Height 1080=520
 HDMI-A-0 DVI-D-0 Height 1920x1080=409
 HDMI-A-0 DVI-D-0 Width 1920=635
-HDMI-A-0 DVI-D-0 Width 1920x1080=408
+HDMI-A-0 DVI-D-0 Width 1920x1080=429
 Height 1080=518
 Width 1920=635
 
@@ -79,7 +85,7 @@ ConfirmTrash=true
 
 [Open-with settings]
 CompletionMode=1
-History=calc,qgis,josm,dbea,vlc,fire,draw,digi,darkt,digik,digika,Digikam,kate,thund,viking
+History=vlc,qgis,calc,josm,dbea,fire,draw,digi,darkt,digik,digika,Digikam,kate,thund,viking
 
 [PreviewSettings]
 Plugins=

@@ -39,7 +39,8 @@
   },
   "spellchecker": {
     "active": false,
-    "language": ""
+    "language": "de",
+    "src": "/home/hauke/.config/Abricotine/app/dictionaries/de"
   },
   "tasks": [
     {
