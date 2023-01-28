@@ -19,6 +19,7 @@ export KDE_SESSION_VERSION=5
 export ANDROID_HOME=/media/hauke/Android
 export GOROOT=/usr/lib/go/
 export GOPATH=$HOME/Projekte/go
+export GO111MODULE=off
 
 # For simple-task-manager project
 export STM_OAUTH_CONSUMER_KEY="TWaSD2RpZbtxuV5reVZ7jOQNDGmPjDux2BGK3zUy"
