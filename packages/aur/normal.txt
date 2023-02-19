@@ -1,6 +1,7 @@
 # Some more normal applications
-spotify
+josm-stable
 portfolio-performance-bin
+spotify
 youtube-dl
 
 # VirtualBox

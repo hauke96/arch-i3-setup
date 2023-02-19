@@ -27,11 +27,12 @@ signal-desktop
 telegram-desktop
 
 # OSM & GIS
-josm
 qgis
 
 # Multimedia
+audacity
 calibre
+darktable
 gimp
 gwenview
 handbrake
@@ -43,6 +44,7 @@ pulseaudio
 vlc
 
 # Documents
+evince
 kate
 libreoffice-still-de
 okular

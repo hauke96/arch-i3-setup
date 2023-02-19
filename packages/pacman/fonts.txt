@@ -2,6 +2,7 @@ ttf-dejavu
 ttf-droid
 ttf-hack
 ttf-liberation
+ttf-sourcesanspro
 
 # For emojis, asian characters, etc.
 noto-fonts

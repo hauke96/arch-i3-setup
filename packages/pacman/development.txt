@@ -12,6 +12,10 @@ go
 nodejs
 npm
 
+# Python
+python3
+python-pip
+
 # Docker
 docker
 docker-compose
@@ -22,4 +26,3 @@ git
 gitg
 hugo
 make
-pandoc

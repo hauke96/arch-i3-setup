@@ -1,3 +1,4 @@
+exfatprogs
 ntfs-3g
 # To mount borg backups
 python-llfuse

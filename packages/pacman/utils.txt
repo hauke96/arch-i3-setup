@@ -26,3 +26,7 @@ perl-json-xs
 libdvdcss
 libdvdnav
 libdvdread
+
+# OSM stuff
+osm2pgsql
+osmium-tool
