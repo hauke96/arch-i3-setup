@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Usage: ./add-config.sh ~/path/to/config
+
 set -e
 
 ORIGINAL=$(realpath $1)
