@@ -160,6 +160,9 @@ set $ws_spotify   2:S
 set $ws_browser   3:B
 set $ws_mail      4:M
 
+# define other stuff
+set $start_delay "sleep 1"
+
 # map workspaces to monitors
 workspace $ws_messaging output $monitor_left
 workspace $ws_spotify output $monitor_right
@@ -249,9 +252,4 @@ exec --no-startup-id "i3-msg 'workspace $ws_spotify; append_layout ~/.config/i3/
 exec --no-startup-id "i3-msg 'workspace $ws_browser; append_layout ~/.config/i3/layouts/ws_browser.json'"
 exec --no-startup-id "i3-msg 'workspace $ws_mail; append_layout ~/.config/i3/layouts/ws_mail.json'"
 
-exec --no-startup-id telegram-desktop
-exec --no-startup-id signal-desktop
-exec --no-startup-id spotify
-exec --no-startup-id firefox
-exec --no-startup-id kontact
-exec --no-startup-id keepassxc
+exec --no-startup-id .config/i3/autostart.sh
