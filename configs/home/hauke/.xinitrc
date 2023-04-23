@@ -1,5 +1,5 @@
 # KDE, QT and GTK styles
-export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_QPA_PLATFORMTHEME="gtk3"
 export QT_STYLE_OVERRIDE="kvantum"
 export XDG_CURRENT_DESKTOP=KDE
 export GTK_THEME=Breeze-Dark
