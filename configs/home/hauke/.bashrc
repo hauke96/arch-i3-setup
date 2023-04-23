@@ -34,7 +34,7 @@ export WINEVERPATH="$W"
 export WINESERVER="$W/bin/wineserver"
 export WINELOADER="$W/bin/wine"
 export WINEDLLPATH="$W/lib/wine/fakedlls"
-export LD_LIBRARY_PATH="$W/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="$W/lib:/usr/share:$LD_LIBRARY_PATH"
 export WINEPREFIX=~/.steam/steam/steamapps/compatdata/1887720/pfx
 alias wine="$W/bin/wine"
 
