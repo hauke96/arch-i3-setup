@@ -240,6 +240,7 @@ bindsym $mod+r mode "resize"
 # Start these windows as floating windows:
 for_window [class="gnome-calculator"] floating enable
 for_window [class="Gnome-calculator"] floating enable
+for_window [class="spectacle"] floating enable
 
 
 # autostart applications
