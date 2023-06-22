@@ -14,6 +14,7 @@ echo "Start shutdown: $(date)"
 killall firefox
 killall kmail
 killall kontact
+killall thunderbird
 killall keepassxc
 killall telegram-desktop
 killall signal-desktop

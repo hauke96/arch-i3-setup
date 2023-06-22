@@ -9,12 +9,11 @@
        "y": 0
     },
     "marks": [],
-    "name": "Kontact",
+    "name": "Thunderbird",
     "percent": 1,
     "swallows": [
        {
-         "class": "^kontact$",
-         "instance": "^kontact$"
+         "class": "^thunderbird$"
        }
     ],
     "type": "con"

@@ -21,9 +21,7 @@ numlockx &
 # Start KWalletd
 exec kwalletd5 &
 
-# Start akonadi
-exec akonadictl start &
-
+# Desktop background image
 exec nitrogen --restore >> ~/.nitrogen.log &
 
 #exec if [ -f ~/.i3.log ]; then mv ~/.i3.log ~/.i3.log.old; fi

@@ -9,5 +9,5 @@ sleep 1
 (signal-desktop) &
 (spotify) &
 (firefox) &
-(kontact) &
+(thunderbird) &
 (keepassxc) &

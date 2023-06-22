@@ -1,7 +1,6 @@
 # These are normal things that are used probably every day
 
 # Internet
-akregator
 dhcpcd
 filezilla
 firefox
@@ -17,12 +16,7 @@ rsync
 sshpass
 
 # Communication
-bogofilter
-kdepim-addons
-kmail
-kleopatra
-kontact
-korganizer
+thunderbird
 signal-desktop
 telegram-desktop
 
