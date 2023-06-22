@@ -8,6 +8,7 @@ fdroidserver
 
 # Go
 goland
+goland-jre
 
 # Web
 webstorm

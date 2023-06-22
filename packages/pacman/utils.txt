@@ -12,6 +12,7 @@ lsof
 ntp
 p7zip
 unzip
+wget
 which
 zip
 

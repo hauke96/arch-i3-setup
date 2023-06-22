@@ -1,8 +1,8 @@
 # Some more normal applications
-josm-stable
+josm-latest
 portfolio-performance-bin
 spotify
-youtube-dl
+yt-dlp-git
 
 # VirtualBox
 virtualbox-ext-oracle

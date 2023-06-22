@@ -46,6 +46,7 @@ skanlite
 texlive-lang
 texlive-most
 texstudio
+vim
 xournalpp
 
 # Misc
