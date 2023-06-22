@@ -17,7 +17,7 @@ do
 		if [ "$1" != "--name-only" ]
 		then
 			echo
-			echo "$DIFF"
+			git diff --no-index configs/$FILE /$FILE
 			echo
 			echo
 			echo
