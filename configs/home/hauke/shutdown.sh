@@ -10,10 +10,11 @@ fi
 
 echo "Start shutdown: $(date)"
 
+# Go into home folder
+cd
+
 # Exit all applications that might cause inconsistend backups
 killall firefox
-killall kmail
-killall kontact
 killall thunderbird
 killall keepassxc
 killall telegram-desktop
@@ -25,9 +26,6 @@ killall spotify
 # Update packages
 #sudo -u hauke yay -Syyu --aur --noconfirm
 sudo -u hauke yay -Syyu --sudoloop --noconfirm
-
-# Stop akonadi as this also might inconsistend backups
-akonadictl stop
 
 # Create backups
 ./backup.sh /media/backup-home /home/hauke
