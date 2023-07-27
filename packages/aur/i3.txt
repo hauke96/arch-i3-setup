@@ -5,9 +5,6 @@ rofi
 nitrogen
 dunst
 
-# Composer: Fork with rounded edges and better blur
-picom-ibhagwan-git
-
 # Font for icons in polybar
 siji-git
 
