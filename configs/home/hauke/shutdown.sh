@@ -21,8 +21,7 @@ killall webstorm
 killall spotify
 
 # Update packages
-#sudo -u hauke yay -Syyu --aur --noconfirm
-sudo yay -Syyu --sudoloop --noconfirm
+sudo -u hauke yay -Syyu --sudoloop --noconfirm
 
 # Create backups
 ./backup.sh /media/backup-home /home/hauke
