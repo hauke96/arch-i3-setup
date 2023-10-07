@@ -15,12 +15,6 @@ systemctl --user import-environment DISPLAY
 # Enable numlock
 numlockx &
 
-# For globale kde binding. Needed by e.g. spectacle
-#exec kglobalaccel5 &
-
-# Start KWalletd
-exec kwalletd5 &
-
 # Desktop background image
 exec nitrogen --restore >> ~/.nitrogen.log &
 
