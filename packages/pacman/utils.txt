@@ -19,6 +19,7 @@ zip
 
 # Printing
 cups-pdf
+cups-browsed
 
 # To make i3-save-tree work
 perl-anyevent-i3
