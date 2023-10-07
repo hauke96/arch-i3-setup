@@ -63,3 +63,5 @@ keepassxc
 # Screenshots
 spectacle
 
+# AUR
+base-devel
