@@ -2,10 +2,6 @@
 # ~/.bashrc
 #
 
-# In /etc/environment eintragen:
-# Java font anti-aliasing with newer fontconfig version
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
