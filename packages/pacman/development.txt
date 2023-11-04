@@ -2,6 +2,7 @@
 
 # Java (some apps need older JDKs) & Android
 android-tools
+jdk17-openjdk
 jdk11-openjdk
 jdk8-openjdk
 

@@ -7,6 +7,3 @@ dunst
 
 # Font for icons in polybar
 siji-git
-
-# To make dark breeze icons work
-qt5ct-kde

@@ -7,7 +7,6 @@ xorg-xinit
 breeze
 breeze-gtk
 kvantum
-qt5ct
 
 # Set the the locale for X11
 libxkbcommon-x11
