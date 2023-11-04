@@ -1,5 +1,5 @@
 # Additional development applications
-abricotine
+obsidian-bin
 pandoc-bin
 
 # Android
