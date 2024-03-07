@@ -27,3 +27,11 @@ export STM_OAUTH_CONSUMER_KEY="TWaSD2RpZbtxuV5reVZ7jOQNDGmPjDux2BGK3zUy"
 export STM_OAUTH_SECRET="a8K9wAU4Z8v8G7ayxnOpjnsLknkW72Txh62Nsu1C"
 export STM_DB_USERNAME="stm"
 export STM_DB_PASSWORD="geheim"
+export STM_DB_HOST="localhost"
+
+if ! ps -C Xorg  &>/dev/null; then
+    # No X server running
+    startx
+else
+	echo "X already running on other TTY."
+fi
