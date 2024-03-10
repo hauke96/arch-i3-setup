@@ -27,19 +27,25 @@ HOME_HAUKE="/home/hauke"
 info "Creating backup $BORG_REPO::$NOW"
 borg create                         \
 	--verbose                       \
-	--filter AME                    \
+	--filter AMEx                   \
 	--list                          \
 	--stats                         \
 	--show-rc                       \
 	--compression lz4               \
 	--exclude-caches                \
-	--exclude '/var/tmp/*'          \
-	--exclude '/var/cache/*'        \
-	--exclude '/home/*/.cache/*'    \
-	--exclude '/home/*/Downloads'   \
-	--exclude '/home/*/.npm'        \
-	--exclude '/home/*/.nuget'      \
-	--exclude '/home/*/dotTraceSnapshots' \
+	--exclude '*/tmp'               \
+	--exclude '*/cache'             \
+	--exclude '*/.cache'            \
+	--exclude '*/Downloads'         \
+	--exclude '*/.npm'              \
+	--exclude '*/.nuget'            \
+	--exclude '*/.local/share/Steam' \
+	--exclude '*/dotTraceSnapshots' \
+	--exclude '*/.Trash*'           \
+	--exclude '*/target'            \
+	--exclude '*/node_modules'      \
+	--exclude '*/.angular'          \
+	--exclude 'var/lib/docker'      \
 	--exclude '$HOME_HAUKE/Projekte/C#/MARS' \
 	--exclude '$HOME_HAUKE/Videos'  \
 	--exclude '$HOME_HAUKE/.i3.log*'\
@@ -56,9 +62,9 @@ borg prune                          \
 	--list                          \
 	--show-rc                       \
 	--keep-daily   7                \
-	--keep-weekly  4                \
-	--keep-monthly 6                \
-	--keep-yearly  2                \
+	--keep-weekly  8                \
+	--keep-monthly 12               \
+	--keep-yearly  10               \
 	"$BORG_REPO"
 prune_exit=$?
 info "Done ($prune_exit): Pruning repository"
