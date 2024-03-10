@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# trap ctrl-c and call ctrl_c()
+trap abort INT
+
+function abort() {
+	echo "ABORT"
+	exit 1
+}
+
 function head {
 	echo
     printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' =
@@ -18,7 +26,7 @@ function killApp()
 if [ "$(id -u)" != 0 ]
 then
 	echo "This must be run as root!"
-	exit 1
+	abort
 fi
 
 echo "Start upd at $(date)"
@@ -37,8 +45,15 @@ echo "Done closing applications"
 
 # Update packages
 head "Update packages"
-sudo -u hauke yay -Syyu --sudoloop --noconfirm
+if ! sudo -u hauke yay -Syyu --noconfirm --sudoloop
+then
+	abort
+fi
 echo "Done updating packages"
+
+#head "Update packages (official)"
+#pacman -Syyu --noconfirm
+#echo "Done updating official packages with pacman"
 
 # Create backups
 head "Backup 1/3 - /home/hauke" 
