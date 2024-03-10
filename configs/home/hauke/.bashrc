@@ -54,6 +54,7 @@ alias http='python3 -m http.server'
 #alias upd='sudo bash -c "pacman -Syu && shutdown -h now"'
 alias upd='cd $HOME && mkdir -p .shutdown && sudo ./shutdown.sh 2>&1 | tee -a .shutdown/$(date +"%Y%m%d_%H%M%S").log'
 
+source /usr/share/nvm/init-nvm.sh
 
 #PS1='[\u@\h \W]\$ '
 green="\[\033[01;32m\]"
