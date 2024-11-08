@@ -56,14 +56,25 @@ echo "Done updating packages"
 #echo "Done updating official packages with pacman"
 
 # Create backups
-head "Backup 1/3 - /home/hauke" 
-./backup.sh /media/backup-home /home/hauke
 
-head "Backup 2/3 - /etc /var /boot /opt"
-./backup.sh /media/backup-data/system/current "/etc /var /boot /opt"
+# This file contains the necessary credentials for the cloud backups
+source .backuprc
 
-head "Backup 3/3 - /media/data"
-./backup.sh /media/backup-data/data /media/data
+head "Backup 1/3 (local) - /home/hauke"
+./backup.sh /media/backup-home /home/hauke 7 8 12 10
+head "Backup 1/3 (cloud) - /home/hauke"
+./backup.sh ssh://u431537-sub1@u431537.your-storagebox.de:23/./backups/home-hauke /home/hauke 1 4 12 10 "$BACKUP_HOME_PASSPHRASE"
+
+head "Backup 2/3 (local) - /etc /var /boot /opt"
+./backup.sh /media/backup-data/system/current "/etc /var /boot /opt" 7 8 12 10
+head "Backup 2/3 (cloud) - /etc /var /boot /opt"
+./backup.sh ssh://u431537-sub1@u431537.your-storagebox.de:23/./backups/system "/etc /var /boot /opt" 1 4 12 10 "$BACKUP_SYSTEM_PASSPHRASE"
+
+head "Backup 3/3 (local) - /media/data"
+./backup.sh /media/backup-data/data /media/data 7 8 12 10
+head "Backup 3/3 (cloud) - /media/data"
+./backup.sh ssh://u431537-sub1@u431537.your-storagebox.de:23/./backups/data /media/data 1 4 12 10 "$BACKUP_DATA_PASSPHRASE"
+
 echo "Finished all backups"
 
 # Actually shutdown

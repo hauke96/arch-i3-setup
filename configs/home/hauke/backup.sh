@@ -5,13 +5,17 @@
 
 # Usage: ./backup.sh <repo> <folder> [passphrase]
 # Examples:
-#	./backup.sh /media/backup-data/data /media/data
-#	./backup.sh /backup/whatever /home/hauke/idontknow superS3cürePassfrase
+#	./backup.sh /media/backup-data/data /media/data 1 2 3 4
+#	./backup.sh /backup/whatever /home/hauke/idontknow 1 2 3 4 superS3cürePassfrase
 
 export BORG_REPO="$1"
-export BORG_PASSPHRASE="$3"
-
 FOLDER="$2"
+KEEP_DAILY=$3
+KEEP_WEEKLY=$4
+KEEP_MONTHLY=$5
+KEEP_YEARLY=$6
+export BORG_PASSPHRASE="$7"
+
 NOW=$(date +"%Y%m%d_%H%M%S")
 
 # some helpers and error handling:
@@ -46,10 +50,12 @@ borg create                         \
 	--exclude '*/node_modules'      \
 	--exclude '*/.angular'          \
 	--exclude 'var/lib/docker'      \
+	--exclude '*/soq-index*'        \
+	--exclude '*/import-temp-cell*' \
+	--exclude '*.pbf'               \
 	--exclude '$HOME_HAUKE/Projekte/C#/MARS' \
 	--exclude '$HOME_HAUKE/Videos'  \
 	--exclude '$HOME_HAUKE/.i3.log*'\
-	                                \
 	::"$NOW"                        \
 	$FOLDER                         
 backup_exit=$?
@@ -61,10 +67,10 @@ info "Pruning repository"
 borg prune                          \
 	--list                          \
 	--show-rc                       \
-	--keep-daily   7                \
-	--keep-weekly  8                \
-	--keep-monthly 12               \
-	--keep-yearly  10               \
+	--keep-daily   $KEEP_DAILY      \
+	--keep-weekly  $KEEP_WEEKLY     \
+	--keep-monthly $KEEP_MONTHLY    \
+	--keep-yearly  $KEEP_YEARLY     \
 	"$BORG_REPO"
 prune_exit=$?
 info "Done ($prune_exit): Pruning repository"
