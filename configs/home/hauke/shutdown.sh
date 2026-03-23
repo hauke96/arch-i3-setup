@@ -36,7 +36,7 @@ head "Exit desktop applications"
 killall firefox
 killall thunderbird
 killall keepassxc
-killall telegram-desktop
+killall Telegram
 killall signal-desktop
 killall goland
 killall webstorm

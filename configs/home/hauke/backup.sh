@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Copied and adjusted from here:
 # https://borgbackup.readthedocs.io/en/stable/quickstart.html#automating-backups
@@ -7,6 +7,17 @@
 # Examples:
 #	./backup.sh /media/backup-data/data /media/data 1 2 3 4
 #	./backup.sh /backup/whatever /home/hauke/idontknow 1 2 3 4 superS3cürePassfrase
+
+# some helpers and error handling:
+info()
+{
+	printf "%s -- %s\n" "$( date )" "$*"
+}
+trap 'echo Backup $NOW interrupted >&2; exit 2' INT TERM
+
+set -e
+
+
 
 export BORG_REPO="$1"
 FOLDER="$2"
@@ -18,16 +29,11 @@ export BORG_PASSPHRASE="$7"
 
 NOW=$(date +"%Y%m%d_%H%M%S")
 
-# some helpers and error handling:
-info()
-{
-	printf "%s %s\n" "$( date )" "$*" >&2
-}
-trap 'echo Backup $NOW interrupted >&2; exit 2' INT TERM
 
 
 # Create new backup
-HOME_HAUKE="/home/hauke"
+backup_exit=0
+HOME="/home/hauke"
 info "Creating backup $BORG_REPO::$NOW"
 borg create                         \
 	--verbose                       \
@@ -40,29 +46,35 @@ borg create                         \
 	--exclude '*/tmp'               \
 	--exclude '*/cache'             \
 	--exclude '*/.cache'            \
-	--exclude '*/Downloads'         \
-	--exclude '*/.npm'              \
-	--exclude '*/.nuget'            \
-	--exclude '*/.local/share/Steam' \
-	--exclude '*/dotTraceSnapshots' \
+	--exclude '*/.android/avd'      \
 	--exclude '*/.Trash*'           \
-	--exclude '*/target'            \
+	--exclude "*/.local/share/Trash" \
+	--exclude '*/.local/share/Steam' \
+	--exclude '*/.i3.log*'          \
+	--exclude '*/Programme/ISO/*.iso' \
+	--exclude "$HOME/Downloads"     \
+	--exclude "$HOME/Videos"        \
+	--exclude '*/Projekte/C#/MARS'  \
+	--exclude '*/Projekte/OSM/OpenDroneMap' \
+	--exclude '*/.npm'              \
+	--exclude '*/.nvm'              \
 	--exclude '*/node_modules'      \
 	--exclude '*/.angular'          \
+	--exclude '*/.nuget'            \
+	--exclude '*/dotTraceSnapshots' \
+	--exclude '*/target'            \
 	--exclude 'var/lib/docker'      \
 	--exclude '*/soq-index*'        \
 	--exclude '*/import-temp-cell*' \
 	--exclude '*.pbf'               \
-	--exclude '$HOME_HAUKE/Projekte/C#/MARS' \
-	--exclude '$HOME_HAUKE/Videos'  \
-	--exclude '$HOME_HAUKE/.i3.log*'\
 	::"$NOW"                        \
-	$FOLDER                         
-backup_exit=$?
-info "Done ($backup_exit): Creating backup $BORG_REPO::$NOW"
+	$FOLDER || backup_exit=$?
+info "Done creating backup $BORG_REPO::$NOW with exit code $backup_exit"
+
 
 
 # Prune to remove old backups
+prune_exit=0
 info "Pruning repository"
 borg prune                          \
 	--list                          \
@@ -71,16 +83,17 @@ borg prune                          \
 	--keep-weekly  $KEEP_WEEKLY     \
 	--keep-monthly $KEEP_MONTHLY    \
 	--keep-yearly  $KEEP_YEARLY     \
-	"$BORG_REPO"
-prune_exit=$?
-info "Done ($prune_exit): Pruning repository"
+	"$BORG_REPO" || prune_exit=$?
+info "Done pruning repository $BORG_REPO with exit code $prune_exit"
+
 
 
 # Actually free repo disk space by compacting segments
+compact_exit=0
 info "Compacting repository"
-borg compact --progress
-compact_exit=$?
-info "Done ($compact_exit): Compacting repository"
+borg compact --progress || compact_exit=$?
+info "Done compacting repository $BORG_REPO with exit code $compact_exit"
+
 
 
 # Use highest exit code as global exit code
@@ -96,4 +109,3 @@ else
 	info "Backup $BORG_REPO::$NOW FAILED!"
 fi
 
-exit ${global_exit}
