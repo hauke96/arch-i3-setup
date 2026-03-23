@@ -148,7 +148,7 @@ bindsym $mod+a focus parent
 
 # make a screenshot
 #bindsym --release $mod+x exec --no-startup-id import /home/hauke/Bilder/latest-screenshot.png
-bindsym Print exec --no-startup-id "spectacle -g"
+bindsym Print exec --no-startup-id "QT_STYLE_OVERRIDE='' QT_QPA_PLATFORMTHEME=qt6ct spectacle -g"
 
 # define monitors
 set $monitor_left "DisplayPort-1"
@@ -249,6 +249,7 @@ bindsym $mod+r mode "resize"
 for_window [class="gnome-calculator"] floating enable
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="spectacle"] floating enable
+for_window [class="kcalc"] floating enable
 
 
 # autostart applications

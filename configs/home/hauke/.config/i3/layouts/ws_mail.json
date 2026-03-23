@@ -13,7 +13,7 @@
     "percent": 1,
     "swallows": [
        {
-         "class": "^thunderbird$"
+         "class": "^org.mozilla.Thunderbird$"
        }
     ],
     "type": "con"

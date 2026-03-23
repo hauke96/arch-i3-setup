@@ -5,7 +5,7 @@
 # layout resore window, which will just stay open.
 sleep 1
 
-(telegram-desktop) &
+(Telegram) &
 (signal-desktop) &
 (spotify) &
 (firefox) &
