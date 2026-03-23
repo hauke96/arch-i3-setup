@@ -34,6 +34,7 @@ cp -a ${THEME_NAME}/* ${THEME_DIR}/${THEME_NAME} || true
 # Set theme
 # Backup grub config
 echo "Backup default grub file"
+rm -f /etc/default/grub.bak
 cp -an /etc/default/grub /etc/default/grub.bak
 
 echo "Remove old GRUB_THEME entry to default grub file"
