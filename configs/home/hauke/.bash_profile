@@ -11,12 +11,12 @@ export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 
 # Needed to work properly with XDG
-export KDE_SESSION_VERSION=5
+#export KDE_SESSION_VERSION=5
 
 # For ImageMagick's problems with Nvidia+OpenCL
 #export MAGICK_OCL_DEVICE=OFF
 
-export ANDROID_HOME=/media/hauke/Android
+export ANDROID_HOME=/home/hauke/Android
 export GOROOT=/usr/lib/go/
 export GOPATH=$HOME/Projekte/go
 export PATH=$PATH:$GOPATH/bin
@@ -28,6 +28,7 @@ export STM_OAUTH_SECRET="a8K9wAU4Z8v8G7ayxnOpjnsLknkW72Txh62Nsu1C"
 export STM_DB_USERNAME="stm"
 export STM_DB_PASSWORD="geheim"
 export STM_DB_HOST="localhost"
+export STM_DB_DATABASE="stm"
 
 if ! ps -C Xorg  &>/dev/null; then
     # No X server running

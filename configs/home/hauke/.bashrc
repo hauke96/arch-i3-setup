@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+setxkbmap de
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -24,21 +26,28 @@ fi
 # Per shell: Reference to GPG pinentry tty
 export GPG_TTY=$(tty)
 
-export W="/home/hauke/.steam/steam/steamapps/common/Proton\ 7\.0/dist"
+# For win32 arch:
+#export WINEARCH=win32
+#export WINEPREFIX="/home/hauke/.local/share/wineprefixes/wine32"
+#export W="/usr"
+
+export WINEPREFIX=~/.steam/steam/steamapps/compatdata/1887720/pfx
+export W=/home/hauke/.steam/steam/steamapps/common/Proton\\\ 7\.0/dist
 export WINEVERPATH="$W"
 #export PATH=$W/bin:$PATH
 export WINESERVER="$W/bin/wineserver"
 export WINELOADER="$W/bin/wine"
 export WINEDLLPATH="$W/lib/wine/fakedlls"
 export LD_LIBRARY_PATH="$W/lib:/usr/share:$LD_LIBRARY_PATH"
-export WINEPREFIX=~/.steam/steam/steamapps/compatdata/1887720/pfx
 alias wine="$W/bin/wine"
 
 # For simple-task-manager project
-alias stm-t='ssh -p 28251 root@stm-test.hauke-stieler.de'
-alias antares='ssh -p 28251 root@stm-test.hauke-stieler.de'
 alias stm='ssh -p 17642 stm@stm.hauke-stieler.de'
+alias stm-t='ssh -p 28251 hauke@stm-test.hauke-stieler.de'
+alias antares='ssh -p 28251 root@stm-test.hauke-stieler.de'
 alias beteigeuze='ssh -p 17642 stm@stm.hauke-stieler.de'
+alias deneb='ssh -p 28251 hauke@deneb.hauke-stieler.de'
+alias storagebox='ssh -p 23 u431537-sub1@u431537.your-storagebox.de'
 
 alias castor='ssh hauke@192.168.178.34'
 
@@ -54,7 +63,9 @@ alias http='python3 -m http.server'
 #alias upd='sudo bash -c "pacman -Syu && shutdown -h now"'
 alias upd='cd $HOME && mkdir -p .shutdown && sudo ./shutdown.sh 2>&1 | tee -a .shutdown/$(date +"%Y%m%d_%H%M%S").log'
 
+# Enable auto-completion for several commands
 source /usr/share/nvm/init-nvm.sh
+source <(ng completion script)
 
 #PS1='[\u@\h \W]\$ '
 green="\[\033[01;32m\]"
@@ -135,3 +146,4 @@ PROMPT_COMMAND=ps1
 # remember the last [...] commands in history
 export HISTSIZE=1000000
 export HISTFILESIZE=1000000
+
