@@ -1,7 +1,10 @@
 MenuBar=Disabled
 
 [$Version]
-update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detailsmodesettings.upd:move-content-display
+
+[ContentDisplay]
+UseShortRelativeDates=false
 
 [ContextMenu]
 ShowCopyLocation=false
@@ -13,7 +16,6 @@ DefaultProfile=Hauke.profile
 
 [DetailsMode]
 PreviewSize=16
-UseShortRelativeDates=false
 
 [Favorite Profiles]
 Favorites=
@@ -23,6 +25,7 @@ BrowseThroughArchives=true
 GlobalViewProps=true
 HomeUrl=/home/hauke/
 RememberOpenedTabs=false
+ShowStatusBar=FullWidth
 SplitView=true
 Version=202
 ViewPropsTimestamp=2018,8,26,2,58,18
@@ -35,14 +38,16 @@ Places Icons Auto-resize=false
 Places Icons Static Size=22
 
 [KPropertiesDialog]
+2 screens: Height=529
+2 screens: Width=619
 DVI-D-0 HDMI-A-0 Height 1920x1080=542
 DVI-D-0 HDMI-A-0 Width 1920x1080=619
 DisplayPort-1 DVI-D-0 Height 1920x1080=542
 DisplayPort-1 DVI-D-0 Height 1920x1080 DVI-D-0=554
-DisplayPort-1 DVI-D-0 Height 1920x1080 DisplayPort-1=357
+DisplayPort-1 DVI-D-0 Height 1920x1080 DisplayPort-1=554
 DisplayPort-1 DVI-D-0 Width 1920x1080=619
 DisplayPort-1 DVI-D-0 Width 1920x1080 DVI-D-0=619
-DisplayPort-1 DVI-D-0 Width 1920x1080 DisplayPort-1=338
+DisplayPort-1 DVI-D-0 Width 1920x1080 DisplayPort-1=619
 HDMI-A-0 DVI-D-0 Height 1080=520
 HDMI-A-0 DVI-D-0 Height 1920x1080=409
 HDMI-A-0 DVI-D-0 Width 1920=635
@@ -74,8 +79,6 @@ HDMI-A-0 XPosition 1920x1080=0
 HDMI-A-0 YPosition=29
 HDMI-A-0 YPosition 1920x1080=29
 Height 1080=1015
-MenuBar=Disabled
-ToolBarsMovable=Disabled
 Width 1920=1920
 Window-Maximized 1080x1920=true
 Window-Maximized 900x1440=true

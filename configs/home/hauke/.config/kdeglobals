@@ -142,6 +142,7 @@ shadeSortColumn=true
 [KDE]
 ShowDeleteCommand=true
 contrast=4
+widgetStyle=qt6ct-style
 
 [KFileDialog Settings]
 Allow Expansion=false
@@ -164,9 +165,10 @@ Speedbar Width=153
 View Style=DetailTree
 
 [KShortcutsDialog Settings]
-Dialog Size=635,480
+Dialog Size=915,550
 
 [PreviewSettings]
+EnableRemoteFolderThumbnail=false
 MaximumRemoteSize=0
 
 [WM]

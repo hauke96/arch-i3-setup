@@ -1,5 +1,5 @@
 [CollectionTreeView]
-Expansion=c114
+Expansion=
 HorizontalScroll=0
 VerticalScroll=0
 
@@ -14,7 +14,7 @@ Range Mode=3
 
 [GlobalCollectionSelection]
 Current=x-1
-Selection=c116,c118,c119
+Selection=c119,c116,c118
 
 [GlobalCollectionView]
 Expansion=
@@ -22,19 +22,26 @@ HorizontalScroll=0
 VerticalScroll=0
 
 [KFileDialog Settings]
+2 screens: Height=540
+2 screens: Width=960
 DisplayPort-1 DVI-D-0 Height 1920x1080 DVI-D-0=540
 DisplayPort-1 DVI-D-0 Width 1920x1080 DVI-D-0=960
 HDMI-A-0 DVI-D-0 Height 1920x1080=540
 HDMI-A-0 DVI-D-0 Width 1920x1080=960
-Recent Files[$e]=IMG_20220520_213757.jpg,file:$HOME/Studium/SoSe_22/Anmeldung Masterarbeit.pdf,file:$HOME/Studium/SoSe_22/Anmeldung Masterarbeit unterschrieben.pdf,file:$HOME/Downloads/IMG_20220704_123842.jpg,file:$HOME/Downloads/IMG_20220704_123828.jpg
-Recent URLs[$e]=file:$HOME/Downloads/,file:$HOME/,file:$HOME/Studium/SoSe_22/
+Recent Files[$e]=IMG_20220520_213757.jpg,file:$HOME/Projekte/master-arbeit/master-thesis/thesis/thesis.pdf,file:$HOME/Dokumente/WPS/Gehaltsrechnung.ods,file:$HOME/Downloads/Gesprächsleitfaden 2022 ausfüllbar.pdf,file:$HOME/Studium/SoSe_22/Anmeldung Masterarbeit.pdf,file:$HOME/Studium/SoSe_22/Anmeldung Masterarbeit unterschrieben.pdf,file:$HOME/Downloads/IMG_20220704_123842.jpg,file:$HOME/Downloads/IMG_20220704_123828.jpg
+Recent URLs[$e]=file:$HOME/Downloads/,file:$HOME/,file:$HOME/Studium/SoSe_22/,file:$HOME/Projekte/master-arbeit/master-thesis/evaluation/visualizations/,file:$HOME/Projekte/master-arbeit/master-thesis/thesis/,file:$HOME/Dokumente/WPS/,file:$HOME/Projekte/master-arbeit/master-thesis/
 detailViewIconSize=16
 
 [KOrganizer Geometry]
 Separator1=345,1464
-Separator2=241,0,343,342
+Separator2=245,0,350,348
 
 [MainWindow]
+2 screens: Height=1025
+2 screens: Width=1918
+2 screens: XPosition=1921
+2 screens: YPosition=54
+DVI-D-0 DisplayPort-1=DVI-D-0
 DVI-D-0 DisplayPort-1 Height 1920x1080=1004
 DVI-D-0 DisplayPort-1 Width 1920x1080=1902
 DVI-D-0 DisplayPort-1 XPosition 1920x1080=1929
@@ -64,23 +71,28 @@ HDMI-A-0 DVI-D-0 XPosition 1920x1080=1929
 HDMI-A-0 DVI-D-0 XPosition 640x480=9
 HDMI-A-0 DVI-D-0 YPosition 1920x1080=50
 HDMI-A-0 DVI-D-0 YPosition 640x480=67
-State=AAAA/wAAAAD9AAAAAAAAB34AAAOsAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAIABuAGEAdgBpAGcAYQB0AG8AcgBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAA=
+State=AAAA/wAAAAD9AAAAAAAAB34AAAO9AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAIABuAGEAdgBpAGcAYQB0AG8AcgBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAA=
 ToolBarsMovable=Disabled
 
 [MainWindowkontact_akregatorplugin]
+2 screens: Height=1042
+2 screens: Width=1918
+2 screens: XPosition=1921
+2 screens: YPosition=37
+DVI-D-0 DisplayPort-1=DVI-D-0
 DVI-D-0 HDMI-A-0 Height 1920x1080=1021
 DVI-D-0 HDMI-A-0 Width 1920x1080=1902
 DVI-D-0 HDMI-A-0 XPosition 1920x1080=1929
 DVI-D-0 HDMI-A-0 YPosition 1920x1080=50
 DisplayPort-1 DVI-D-0=DVI-D-0
 DisplayPort-1 DVI-D-0 Height 1920x1080=1021
-DisplayPort-1 DVI-D-0 Height 1920x1080 DVI-D-0=1042
+DisplayPort-1 DVI-D-0 Height 1920x1080 DVI-D-0=1025
 DisplayPort-1 DVI-D-0 Width 1920x1080=1902
 DisplayPort-1 DVI-D-0 Width 1920x1080 DVI-D-0=1918
 DisplayPort-1 DVI-D-0 XPosition 1920x1080=1929
 DisplayPort-1 DVI-D-0 XPosition 1920x1080 DVI-D-0=1921
 DisplayPort-1 DVI-D-0 YPosition 1920x1080=50
-DisplayPort-1 DVI-D-0 YPosition 1920x1080 DVI-D-0=37
+DisplayPort-1 DVI-D-0 YPosition 1920x1080 DVI-D-0=54
 HDMI-A-0 DVI-D-0 Height 1920x1080=1021
 HDMI-A-0 DVI-D-0 Width 1920x1080=1902
 HDMI-A-0 DVI-D-0 XPosition 1920x1080=1929
@@ -89,6 +101,11 @@ State=AAAA/wAAAAD9AAAAAAAAB34AAAO9AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG
 ToolBarsMovable=Disabled
 
 [MainWindowkontact_kmailplugin]
+2 screens: Height=1025
+2 screens: Width=1918
+2 screens: XPosition=1921
+2 screens: YPosition=54
+DVI-D-0 DisplayPort-1=DVI-D-0
 DVI-D-0 DisplayPort-1 Height 1920x1080=1021
 DVI-D-0 DisplayPort-1 Width 1920x1080=1902
 DVI-D-0 DisplayPort-1 XPosition 1920x1080=1929
@@ -99,7 +116,7 @@ DVI-D-0 HDMI-A-0 XPosition 1920x1080=1929
 DVI-D-0 HDMI-A-0 YPosition 1920x1080=50
 DisplayPort-1 DVI-D-0=DisplayPort-1
 DisplayPort-1 DVI-D-0 Height 1920x1080=1021
-DisplayPort-1 DVI-D-0 Height 1920x1080 DVI-D-0=1025
+DisplayPort-1 DVI-D-0 Height 1920x1080 DVI-D-0=1042
 DisplayPort-1 DVI-D-0 Height 1920x1080 DisplayPort-1=1025
 DisplayPort-1 DVI-D-0 Width 1920x1080=1902
 DisplayPort-1 DVI-D-0 Width 1920x1080 DVI-D-0=1918
@@ -108,7 +125,7 @@ DisplayPort-1 DVI-D-0 XPosition 1920x1080=1929
 DisplayPort-1 DVI-D-0 XPosition 1920x1080 DVI-D-0=1921
 DisplayPort-1 DVI-D-0 XPosition 1920x1080 DisplayPort-1=0
 DisplayPort-1 DVI-D-0 YPosition 1920x1080=50
-DisplayPort-1 DVI-D-0 YPosition 1920x1080 DVI-D-0=54
+DisplayPort-1 DVI-D-0 YPosition 1920x1080 DVI-D-0=37
 DisplayPort-1 DVI-D-0 YPosition 1920x1080 DisplayPort-1=0
 HDMI-A-0 DVI-D-0 Height 1920x1080=1021
 HDMI-A-0 DVI-D-0 Height 640x480=421
@@ -123,6 +140,11 @@ State=AAAA/wAAAAD9AAAAAAAAB34AAAOsAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG
 ToolBarsMovable=Disabled
 
 [MainWindowkontact_korganizerplugin]
+2 screens: Height=1042
+2 screens: Width=1918
+2 screens: XPosition=1921
+2 screens: YPosition=37
+DVI-D-0 DisplayPort-1=DVI-D-0
 DVI-D-0 DisplayPort-1 Height 1920x1080=1021
 DVI-D-0 DisplayPort-1 Width 1920x1080=1902
 DVI-D-0 DisplayPort-1 XPosition 1920x1080=1929
@@ -168,7 +190,7 @@ Separator=107,403
 Size=775,600
 
 [Recent Dirs]
-attachmentDir[$e]=$HOME/Downloads/,$HOME/Documents
+attachmentDir[$e]=$HOME/Studium/Master/,$HOME/Downloads/,$HOME/Documents
 
 [RemoteContent]
 Authorized=
@@ -201,7 +223,8 @@ mainSplitter=0,0
 ActivePlugin=kontact_kmailplugin
 ForceStartupPlugin=true
 ForcedStartupPlugin=kontact_kmailplugin
-LastVersionSeen=5.22.0 (22.12.0)
+LastVersionSeen=5.23.1 (23.04.1)
+SidePaneIconSize=22
 SidePaneSplitter=95,1816
 
 [Views]
