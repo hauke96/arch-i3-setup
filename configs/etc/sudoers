@@ -69,6 +69,7 @@
 # Defaults!/usr/local/bin/sudoreplay !log_output
 # Defaults!REBOOT !log_output
 Defaults passwd_timeout=30
+Defaults env_keep+=SSH_AUTH_SOCK
 
 ##
 ## Runas alias specification
