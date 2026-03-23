@@ -89,8 +89,12 @@ Color=99,106,120
 Color=147,155,170
 
 [General]
+Anchor=0.5,0.5
 Blur=true
 ColorRandomization=false
 Description=One Dark
-Opacity=0.65
+FillStyle=Tile
+Opacity=0.8
 Wallpaper=
+WallpaperFlipType=NoFlip
+WallpaperOpacity=1
