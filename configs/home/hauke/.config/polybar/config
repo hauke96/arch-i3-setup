@@ -57,7 +57,7 @@ module-margin-right = 4
 
 font-0 = hack:fontformat=truetype:size=8:antialias=true;2
 #font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-1 = siji:pixelsize=10;2
+font-1 = Siji:pixelsize=10;2
 
 modules-left = i3
 modules-center = filesystem memory cpu eth
@@ -111,8 +111,9 @@ interval = 25
 #label-unmounted-underline = ${colors.primary}
 
 mount-0 = /
+mount-1 = /home/hauke
 
-label-mounted = %{F#aa9619}%mountpoint%%{F-} : %percentage_used%% (%total%)
+label-mounted = %{F#aa9619}%mountpoint%%{F-} : %percentage_used%% used (%free% free)
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
